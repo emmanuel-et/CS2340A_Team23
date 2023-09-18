@@ -3,40 +3,37 @@ package com.example.cs2340a_team23;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-
+import android.content.Intent;
 public class MainActivity extends AppCompatActivity {
-    private Button startButton;
-    private Button quitButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startButton = findViewById(R.id.startButton);
-        quitButton = findViewById(R.id.quitButton);
+        Button startButton = findViewById(R.id.startButton);
+        Button quitButton = findViewById(R.id.quitButton);
 
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startGame();
-            }
+        startButton.setOnClickListener(view -> {
+            // Create an Intent to start the GameActivity
+            Intent game_config = new Intent(MainActivity.this, activity_game_configuration.class);//replace with nme of class
+
+            // Optionally, you can add extra data to the intent
+            // intent.putExtra("key", "value");
+
+            // Start the GameActivity
+            startActivity(game_config);
+            finish();
         });
 
-        quitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                quitGame();
-            }
+        quitButton.setOnClickListener(view -> {
+            // Finish the current activity to simulate quitting the game
+            finish();
+            System.exit(0);
         });
 
+
     }
-    public void startGame() {
-        //
-    }
-    public void quitGame() {
-        //
-    }
+
+
 }
