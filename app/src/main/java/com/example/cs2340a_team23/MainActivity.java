@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         startButton.setOnClickListener(view -> {
             // Create an Intent to start the GameActivity
-            Intent game_config = new Intent(MainActivity.this, activity_game_configuration.class);//replace with nme of class
+            Intent game_config = new Intent(MainActivity.this, GameConfigurationActivity.class);//replace with nme of class
 
             // Optionally, you can add extra data to the intent
             // intent.putExtra("key", "value");
