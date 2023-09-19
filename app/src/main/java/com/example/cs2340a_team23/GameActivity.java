@@ -16,7 +16,9 @@ public class GameActivity extends AppCompatActivity {
         Button endButton = findViewById(R.id.endButton);
 
         endButton.setOnClickListener(view -> {
-//            Intent gameConfig = new Intent(GameActivity.this, )
+            Intent gameConfig = new Intent(GameActivity.this, EndActivity.class);
+            startActivity(gameConfig);
+            finish();
         });
     }
 }
