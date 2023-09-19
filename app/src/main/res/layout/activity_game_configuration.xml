@@ -16,9 +16,39 @@
         android:layout_marginBottom="671dp"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Name Placeholder"
+        android:text="Type Your Name Here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="279dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="588dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_placeholder" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="229dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="49dp"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
