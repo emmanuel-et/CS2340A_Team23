@@ -9,7 +9,9 @@
     <View
         android:id="@+id/gameView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/playerName"
@@ -18,7 +20,6 @@
         android:fontFamily="@font/vt323"
         android:text="Mario"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerSprite"
@@ -34,6 +35,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mario" />
+
+    <TextView
+        android:id="@+id/playerHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vt323"
+        android:text="Health: 100"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/gameDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="341dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/vt323"
+        android:text="HARD"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/playerSprite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/endButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="END"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerName"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintEnd_toEndOf="parent"
+        tools:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintTop_toBottomOf="@+id/playerName" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
