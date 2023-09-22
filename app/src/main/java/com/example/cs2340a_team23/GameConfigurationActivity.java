@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 public class GameConfigurationActivity extends AppCompatActivity {
 
@@ -14,17 +15,43 @@ public class GameConfigurationActivity extends AppCompatActivity {
 
         Button playButton = findViewById(R.id.playButton);
         EditText nameInput = findViewById(R.id.nameInput);
-
+        RadioGroup difficultyRadioGroup = findViewById(R.id.difficultyRadioGroup);
 
         playButton.setOnClickListener(view -> {
             String playerName = nameInput.getText().toString().trim();
             if (!playerName.isEmpty()) {
+
+                int selectedDifficulty = difficultyRadioGroup.getCheckedRadioButtonId();
+                String difficulty;
+                int health;
+                if(selectedDifficulty == R.id.easyRadioButton) {
+
+                    difficulty = "Easy";
+                    health = 300;
+
+                } else if(selectedDifficulty == R.id.mediumRadioButton) {
+                    health = 200;
+                    difficulty = "Medium";
+
+                } else if(selectedDifficulty == R.id.hardRadioButton) {
+                    health = 100;
+                    difficulty = "hard";
+
+                } else {
+                    health = 75;
+                    difficulty = "superHard";
+
+                }
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
-                gamePlay.putExtra("Player Name", playerName);
+
+                gamePlay.putExtra("health", health);
+                gamePlay.putExtra("playerName", playerName);
+                gamePlay.putExtra("sprite","mario");
+                // Once again is the difficulty in need of being tracked??
+                gamePlay.putExtra("Difficulty", difficulty);
                 startActivity(gamePlay);
                 finish();
             } else {
-                // error message for invalid name
                 nameInput.setError("Player name is invalid, cannot be null, empty, or white space!");
             }
 
