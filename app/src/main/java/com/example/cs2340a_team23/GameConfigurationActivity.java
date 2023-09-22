@@ -16,45 +16,42 @@ public class GameConfigurationActivity extends AppCompatActivity {
         Button playButton = findViewById(R.id.playButton);
         EditText nameInput = findViewById(R.id.nameInput);
         RadioGroup difficultyRadioGroup = findViewById(R.id.difficultyRadioGroup);
-        // Here I have an if statement to see if the name is valid if not throw an error
-        // Then there are many if else for the difficulty and how the data will be changed
+
         playButton.setOnClickListener(view -> {
             String playerName = nameInput.getText().toString().trim();
             if (!playerName.isEmpty()) {
-                // here a sprite name is needed still for the code
+
                 int selectedDifficulty = difficultyRadioGroup.getCheckedRadioButtonId();
                 String difficulty;
-
+                int health;
                 if(selectedDifficulty == R.id.easyRadioButton) {
-                    //do we need to keep track of the difficulty?? easy to delete if need be
+
                     difficulty = "Easy";
-                    int easyHealth = 300;
-                    Player player = new Player(easyHealth, playerName, "sprite");
+                    health = 300;
 
                 } else if(selectedDifficulty == R.id.mediumRadioButton) {
-                    int mediumHealth = 200;
+                    health = 200;
                     difficulty = "Medium";
-                    Player player = new Player(mediumHealth, playerName, "sprite");
 
                 } else if(selectedDifficulty == R.id.hardRadioButton) {
-                    int hardHealth = 100;
+                    health = 100;
                     difficulty = "hard";
-                    Player player = new Player(hardHealth, playerName, "sprite");
 
                 } else {
-                    int superHardHealth = 75;
+                    health = 75;
                     difficulty = "superHard";
-                    Player player = new Player(superHardHealth, playerName, "sprite");
 
                 }
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
-                gamePlay.putExtra("Player Name", playerName);
+
+                gamePlay.putExtra("health", health);
+                gamePlay.putExtra("playerName", playerName);
+                gamePlay.putExtra("sprite","mario");
                 // Once again is the difficulty in need of being tracked??
                 gamePlay.putExtra("Difficulty", difficulty);
                 startActivity(gamePlay);
                 finish();
             } else {
-                // error message for invalid name
                 nameInput.setError("Player name is invalid, cannot be null, empty, or white space!");
             }
 
