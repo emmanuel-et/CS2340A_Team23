@@ -26,16 +26,16 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 int selectedSprite = spriteRadioGroup.getCheckedRadioButtonId();
                 String difficulty;
                 int health;
-                if(selectedDifficulty == R.id.easyRadioButton) {
+                if (selectedDifficulty == R.id.easyRadioButton) {
 
                     difficulty = "Easy";
                     health = 300;
 
-                } else if(selectedDifficulty == R.id.mediumRadioButton) {
+                } else if (selectedDifficulty == R.id.mediumRadioButton) {
                     health = 200;
                     difficulty = "Medium";
 
-                } else if(selectedDifficulty == R.id.hardRadioButton) {
+                } else if (selectedDifficulty == R.id.hardRadioButton) {
                     health = 100;
                     difficulty = "hard";
 
@@ -48,7 +48,7 @@ public class GameConfigurationActivity extends AppCompatActivity {
 
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
 
-                gamePlay.putExtra("health", health);
+                gamePlay.putExtra("health", String.valueOf(health));
                 gamePlay.putExtra("playerName", playerName);
                 if(selectedSprite == R.id.megamanRadioButton) {
                     gamePlay.putExtra("sprite","megaman");
@@ -62,7 +62,8 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 startActivity(gamePlay);
                 finish();
             } else {
-                nameInput.setError("Player name is invalid, cannot be null, empty, or white space!");
+                nameInput.setError("Player name is invalid, cannot be"
+                        + " null, empty, or white space!");
             }
 
         });
