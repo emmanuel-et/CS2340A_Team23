@@ -58,7 +58,7 @@ public class GameConfigurationActivity extends AppCompatActivity {
                     gamePlay.putExtra("sprite","sonic");
                 }
                 // Once again is the difficulty in need of being tracked??
-                gamePlay.putExtra("Difficulty", difficulty);
+                gamePlay.putExtra("difficulty", difficulty);
                 startActivity(gamePlay);
                 finish();
             } else {
