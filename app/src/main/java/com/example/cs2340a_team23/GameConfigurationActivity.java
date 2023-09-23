@@ -16,12 +16,14 @@ public class GameConfigurationActivity extends AppCompatActivity {
         Button playButton = findViewById(R.id.playButton);
         EditText nameInput = findViewById(R.id.nameInput);
         RadioGroup difficultyRadioGroup = findViewById(R.id.difficultyRadioGroup);
+        RadioGroup spriteRadioGroup = findViewById(R.id.spriteRadioGroup);
 
         playButton.setOnClickListener(view -> {
             String playerName = nameInput.getText().toString().trim();
             if (!playerName.isEmpty()) {
 
                 int selectedDifficulty = difficultyRadioGroup.getCheckedRadioButtonId();
+                int selectedSprite = spriteRadioGroup.getCheckedRadioButtonId();
                 String difficulty;
                 int health;
                 if (selectedDifficulty == R.id.easyRadioButton) {
@@ -42,12 +44,21 @@ public class GameConfigurationActivity extends AppCompatActivity {
                     difficulty = "superHard";
 
                 }
+
+
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
 
                 gamePlay.putExtra("health", String.valueOf(health));
                 gamePlay.putExtra("playerName", playerName);
-                gamePlay.putExtra("sprite", "mario");
-                gamePlay.putExtra("difficulty", difficulty);
+                if(selectedSprite == R.id.megamanRadioButton) {
+                    gamePlay.putExtra("sprite","megaman");
+                } else if(selectedSprite == R.id.marioRadioButton) {
+                    gamePlay.putExtra("sprite","mario");
+                } else {
+                    gamePlay.putExtra("sprite","sonic");
+                }
+                // Once again is the difficulty in need of being tracked??
+                gamePlay.putExtra("Difficulty", difficulty);
                 startActivity(gamePlay);
                 finish();
             } else {

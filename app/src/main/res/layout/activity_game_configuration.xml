@@ -13,27 +13,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="148dp"
         android:scaleX="2"
         android:scaleY="2"
         android:text="Type Your Name Here"
+        app:layout_constraintBottom_toTopOf="@+id/nameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_placeholder2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="24dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Set Your Difficulty"
+        app:layout_constraintBottom_toTopOf="@+id/difficultyRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+    <TextView
+        android:id="@+id/name_placeholder3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="3dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="CHOOSE YOUR CHARACTER"
+        app:layout_constraintBottom_toTopOf="@+id/spriteRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyRadioGroup" />
 
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="279dp"
         android:layout_height="57dp"
         android:layout_marginStart="67dp"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="588dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/name_placeholder2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_placeholder" />
 
@@ -51,16 +82,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="99dp"
+        android:layout_height="101dp"
+        android:layout_marginEnd="24dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@id/spriteRadioGroup"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@drawable/megaman" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="99dp"
+        android:layout_height="101dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/spriteRadioGroup"
+        app:srcCompat="@drawable/sonic" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="99dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="45dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:translationY="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/spriteRadioGroup"
+        app:srcCompat="@drawable/mario" />
+
     <RadioGroup
         android:id="@+id/difficultyRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginEnd="155dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/name_placeholder3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput">
+        app:layout_constraintTop_toBottomOf="@+id/name_placeholder2">
 
         <RadioButton
             android:id="@+id/easyRadioButton"
@@ -88,6 +160,42 @@
             android:text="Super Hard"
             tools:layout_editor_absoluteX="164dp"
             tools:layout_editor_absoluteY="371dp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/spriteRadioGroup"
+        android:layout_width="370dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="21dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyRadioGroup">
+
+        <RadioButton
+            android:id="@+id/megamanRadioButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Megaman"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/sonicRadioButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Sonic"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/marioRadioButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Mario"
+            android:visibility="visible" />
     </RadioGroup>
 
 
