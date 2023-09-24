@@ -50,14 +50,13 @@ public class GameConfigurationActivity extends AppCompatActivity {
 
                 gamePlay.putExtra("health", String.valueOf(health));
                 gamePlay.putExtra("playerName", playerName);
-                if(selectedSprite == R.id.megamanRadioButton) {
-                    gamePlay.putExtra("sprite","megaman");
-                } else if(selectedSprite == R.id.marioRadioButton) {
-                    gamePlay.putExtra("sprite","mario");
+                if (selectedSprite == R.id.megamanRadioButton) {
+                    gamePlay.putExtra("sprite", "megaman");
+                } else if (selectedSprite == R.id.marioRadioButton) {
+                    gamePlay.putExtra("sprite", "mario");
                 } else {
-                    gamePlay.putExtra("sprite","sonic");
+                    gamePlay.putExtra("sprite", "sonic");
                 }
-                // Once again is the difficulty in need of being tracked??
                 gamePlay.putExtra("difficulty", difficulty);
                 startActivity(gamePlay);
                 finish();
