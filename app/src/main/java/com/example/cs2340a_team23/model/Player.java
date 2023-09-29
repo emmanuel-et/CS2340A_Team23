@@ -1,4 +1,4 @@
-package com.example.cs2340a_team23;
+package com.example.cs2340a_team23.model;
 
 public class Player {
     private int health;

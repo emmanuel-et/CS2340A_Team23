@@ -1,4 +1,4 @@
-package com.example.cs2340a_team23;
+package com.example.cs2340a_team23.viewmodels;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.cs2340a_team23.R;
 
 public class GameActivity extends AppCompatActivity {
 
