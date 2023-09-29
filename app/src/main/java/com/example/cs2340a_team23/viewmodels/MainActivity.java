@@ -1,10 +1,13 @@
-package com.example.cs2340a_team23;
+package com.example.cs2340a_team23.viewmodels;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
+
+import com.example.cs2340a_team23.R;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

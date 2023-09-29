@@ -1,10 +1,12 @@
-package com.example.cs2340a_team23;
+package com.example.cs2340a_team23.viewmodels;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+
+import com.example.cs2340a_team23.R;
 
 public class GameConfigurationActivity extends AppCompatActivity {
 
