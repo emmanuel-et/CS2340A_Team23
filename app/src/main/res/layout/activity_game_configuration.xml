@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewmodels.GameConfigurationActivity"
+    tools:context=".view.GameConfigurationActivity"
     tools:layout_editor_absoluteX="164dp"
     tools:layout_editor_absoluteY="227dp">
 
