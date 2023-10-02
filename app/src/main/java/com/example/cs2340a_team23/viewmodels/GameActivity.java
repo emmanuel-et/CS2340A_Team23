@@ -15,7 +15,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_room_3);
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(getIntent().getStringExtra("playerName"));
@@ -32,7 +32,6 @@ public class GameActivity extends AppCompatActivity {
         playerSprite.setImageResource(resID);
 
         Button endButton = findViewById(R.id.endButton);
-
 
         endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivity.this, EndActivity.class);
