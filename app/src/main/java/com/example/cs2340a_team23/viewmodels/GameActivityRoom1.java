@@ -21,7 +21,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
         nextButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivityRoom1.this, GameActivityRoom2.class);
-            setContentView(R.layout.activity_room_2);
             startActivity(endScreen);
             finish();
         });

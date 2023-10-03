@@ -18,11 +18,17 @@ public class GameActivityRoom2 extends AppCompatActivity {
         setContentView(R.layout.activity_room_2);
 
         Button prevButton = findViewById(R.id.prevbutton);
+        Button nextButton = findViewById(R.id.nextbutton2);
 
         prevButton.setOnClickListener(view -> {
-            Intent endScreen = new Intent(GameActivityRoom2.this, GameActivityRoom1.class);
-            setContentView(R.layout.activity_room_2);
-            startActivity(endScreen);
+            Intent prevScreen = new Intent(GameActivityRoom2.this, GameActivityRoom1.class);
+            startActivity(prevScreen);
+            finish();
+        });
+
+        nextButton.setOnClickListener(view -> {
+            Intent nextScreen = new Intent(GameActivityRoom2.this, GameActivity.class);
+            startActivity(nextScreen);
             finish();
         });
     }
