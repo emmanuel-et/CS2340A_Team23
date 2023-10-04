@@ -1,7 +1,7 @@
 package com.example.cs2340a_team23.model;
 
 public class Player {
-    private static Player instance = null;
+    private static Player player = null;
     private int health;
     private String playerName;
     private String sprite;
@@ -45,7 +45,7 @@ public class Player {
         this.sprite = sprite;
     }
     public static void resetPlayer() {
-        instance = null;
+        player = null;
     }
 
 }
