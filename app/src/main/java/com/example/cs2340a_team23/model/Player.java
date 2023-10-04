@@ -15,11 +15,11 @@ public class Player {
 
     }
     public static Player getInstance() {
-        if (instance == null) {
+        if (player == null) {
             // Create a new instance if one does not exist
-            instance = new Player(100, "DefaultPlayer", "DefaultSprite");
+            player = new Player(100, "DefaultPlayer", "DefaultSprite");
         }
-        return instance;
+        return player;
     }
     public void setHealth(int health) {
         this.health = health;
