@@ -14,7 +14,7 @@ public class Player {
         this.sprite = sprite;
 
     }
-    public static Player getInstance() {
+    public static Player getPlayer() {
         if (player == null) {
             // Create a new instance if one does not exist
             player = new Player(100, "DefaultPlayer", "DefaultSprite");
