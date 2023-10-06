@@ -7,8 +7,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.cs2340a_team23.R;
-import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.viewModel.PlayerViewModel;
+import com.example.cs2340a_team23.model.Player;
 
 public class GameConfigurationActivity extends AppCompatActivity {
     private PlayerViewModel playerViewModel;
@@ -51,6 +51,21 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 }
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
 
+
+                int selectedSpriteId = spriteRadioGroup.getCheckedRadioButtonId();
+                String sprite = "";
+                switch (selectedSpriteId) {
+                    case R.id.megamanRadioButton:
+                        sprite = "megaman";
+                        break;
+                    case R.id.marioRadioButton:
+                        sprite = "mario";
+                        break;
+                    case R.id.sonicRadioButton:
+                        sprite = "sonic";
+                        break;
+                }
+                playerViewModel.initializePlayer(playerName, health, sprite);
                 Player player = Player.getPlayer();
                 startActivity(gamePlay);
                 finish();

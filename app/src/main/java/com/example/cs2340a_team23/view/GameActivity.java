@@ -20,7 +20,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        playerViewModel = new ViewModelProvider(this).get(PlayerViewModel.class);
+        //playerViewModel = new ViewModelProvider(this).get(PlayerViewModel.class);
 
 
         TextView playerName = findViewById(R.id.playerName);
@@ -37,7 +37,8 @@ public class GameActivity extends AppCompatActivity {
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
         Button endButton = findViewById(R.id.endButton);
-        Player player = Player.getPlayer();
+        playerViewModel.initializePlayer(Player.getPlayer().getPlayerName(), Player.getPlayer().getHealth(), Player.getPlayer().getSprite());
+        //Player player = Player.getPlayer();
 
 
         endButton.setOnClickListener(view -> {
