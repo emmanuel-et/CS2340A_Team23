@@ -7,15 +7,21 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Player;
+import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 
 public class GameActivity extends AppCompatActivity {
+    private PlayerViewModel playerViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        playerViewModel = new ViewModelProvider(this).get(PlayerViewModel.class);
+
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(getIntent().getStringExtra("playerName"));
@@ -30,8 +36,8 @@ public class GameActivity extends AppCompatActivity {
         String spriteName = getIntent().getStringExtra("sprite");
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
-
         Button endButton = findViewById(R.id.endButton);
+        Player player = Player.getPlayer();
 
 
         endButton.setOnClickListener(view -> {

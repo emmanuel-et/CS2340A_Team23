@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 
 public class GameConfigurationActivity extends AppCompatActivity {
@@ -50,30 +51,7 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 }
                 Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
 
-                gamePlay.putExtra("health", String.valueOf(health));
-                gamePlay.putExtra("playerName", playerName);
-                if (selectedSprite == R.id.megamanRadioButton) {
-                    gamePlay.putExtra("sprite", "megaman");
-                } else if (selectedSprite == R.id.marioRadioButton) {
-                    gamePlay.putExtra("sprite", "mario");
-                } else {
-                    gamePlay.putExtra("sprite", "sonic");
-                }
-                int selectedSpriteId = spriteRadioGroup.getCheckedRadioButtonId();
-                String sprite = "";
-                switch (selectedSpriteId) {
-                    case R.id.megamanRadioButton:
-                        sprite = "megaman";
-                        break;
-                    case R.id.marioRadioButton:
-                        sprite = "mario";
-                        break;
-                    case R.id.sonicRadioButton:
-                        sprite = "sonic";
-                        break;
-                }
-                gamePlay.putExtra("difficulty", difficulty);
-                playerViewModel.initializePlayer(playerName, health, sprite);
+                Player player = Player.getPlayer();
                 startActivity(gamePlay);
                 finish();
             } else {
