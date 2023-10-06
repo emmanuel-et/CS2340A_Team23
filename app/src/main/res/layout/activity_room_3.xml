@@ -82,6 +82,18 @@
         tools:layout_constraintStart_toStartOf="parent"
         tools:layout_constraintTop_toBottomOf="@+id/playerName" />
 
+    <Button
+        android:id="@+id/prevbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="710dp"
+        android:layout_marginBottom="750dp"
+        android:text="Prev Room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gameView"
+        app:layout_constraintTop_toBottomOf="@+id/gameView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,13 @@ public class GameActivityRoom3 extends AppCompatActivity {
         playerSprite.setImageResource(resID);
 
         Button endButton = findViewById(R.id.endButton);
+        Button prevButton = findViewById(R.id.prevbutton2);
 
+        prevButton.setOnClickListener(view -> {
+            Intent room2Screen = new Intent(GameActivityRoom3.this, GameActivityRoom2.class);
+            startActivity(room2Screen);
+            finish();
+        });
 
         endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
