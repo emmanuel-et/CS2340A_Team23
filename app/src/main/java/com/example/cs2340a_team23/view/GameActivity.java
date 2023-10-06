@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.lifecycle.ViewModelProvider;
+
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Player;
@@ -20,14 +20,14 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        //playerViewModel = new ViewModelProvider(this).get(PlayerViewModel.class);
+        Player player = Player.getPlayer();
 
 
         TextView playerName = findViewById(R.id.playerName);
-        playerName.setText(getIntent().getStringExtra("playerName"));
+        playerName.setText(player.getPlayerName());
 
         TextView playerHealth = findViewById(R.id.playerHealth);
-        playerHealth.setText("Health: " + getIntent().getStringExtra("health"));
+        playerHealth.setText(player.getHealth());
 
         TextView gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(getIntent().getStringExtra("difficulty"));
@@ -37,10 +37,8 @@ public class GameActivity extends AppCompatActivity {
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
         Button endButton = findViewById(R.id.endButton);
-        playerViewModel.initializePlayer(Player.getPlayer().getPlayerName(), Player.getPlayer().getHealth(), Player.getPlayer().getSprite());
-        //Player player = Player.getPlayer();
-
-
+        playerViewModel.initializePlayer(player.getPlayerName(), player.getHealth(),
+                player.getSprite());
         endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivity.this, EndActivity.class);
             startActivity(endScreen);

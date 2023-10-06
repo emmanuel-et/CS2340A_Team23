@@ -55,15 +55,18 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 int selectedSpriteId = spriteRadioGroup.getCheckedRadioButtonId();
                 String sprite = "";
                 switch (selectedSpriteId) {
-                    case R.id.megamanRadioButton:
-                        sprite = "megaman";
-                        break;
-                    case R.id.marioRadioButton:
-                        sprite = "mario";
-                        break;
-                    case R.id.sonicRadioButton:
-                        sprite = "sonic";
-                        break;
+                case R.id.megamanRadioButton:
+                    sprite = "megaman";
+                    break;
+                case R.id.marioRadioButton:
+                    sprite = "mario";
+                    break;
+                case R.id.sonicRadioButton:
+                    sprite = "sonic";
+                    break;
+                default:
+                    sprite = "";
+                    break;
                 }
                 playerViewModel.initializePlayer(playerName, health, sprite);
                 Player player = Player.getPlayer();
