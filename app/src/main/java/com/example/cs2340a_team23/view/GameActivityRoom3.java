@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivityRoom3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_room_3);
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(getIntent().getStringExtra("playerName"));
@@ -35,7 +35,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         endButton.setOnClickListener(view -> {
-            Intent endScreen = new Intent(GameActivity.this, EndActivity.class);
+            Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
             startActivity(endScreen);
             finish();
         });

@@ -48,7 +48,7 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 }
 
 
-                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
+                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivityRoom3.class);
 
                 gamePlay.putExtra("health", String.valueOf(health));
                 gamePlay.putExtra("playerName", playerName);
