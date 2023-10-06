@@ -15,7 +15,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_room_3);
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(getIntent().getStringExtra("playerName"));
