@@ -22,7 +22,11 @@
         </activity>
         <activity android:name=".viewmodels.GameConfigurationActivity"
             android:exported="false" />
-        <activity android:name=".viewmodels.GameActivity"
+        <activity android:name=".viewmodels.GameActivityRoom1"
+            android:exported="false" />
+        <activity android:name=".viewmodels.GameActivityRoom2"
+            android:exported="false" />
+        <activity android:name=".viewmodels.GameActivityRoom3"
             android:exported="false" />
         <activity android:name=".viewmodels.EndActivity"
             android:exported="false" />

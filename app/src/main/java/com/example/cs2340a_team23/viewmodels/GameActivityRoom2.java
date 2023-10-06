@@ -3,8 +3,6 @@ package com.example.cs2340a_team23.viewmodels;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,14 +19,14 @@ public class GameActivityRoom2 extends AppCompatActivity {
         Button nextButton = findViewById(R.id.nextbutton2);
 
         prevButton.setOnClickListener(view -> {
-            Intent prevScreen = new Intent(GameActivityRoom2.this, GameActivityRoom1.class);
-            startActivity(prevScreen);
+            Intent room1Screen = new Intent(GameActivityRoom2.this, GameActivityRoom1.class);
+            startActivity(room1Screen);
             finish();
         });
 
         nextButton.setOnClickListener(view -> {
-            Intent nextScreen = new Intent(GameActivityRoom2.this, GameActivity.class);
-            startActivity(nextScreen);
+            Intent room3Screen = new Intent(GameActivityRoom2.this, GameActivityRoom3.class);
+            startActivity(room3Screen);
             finish();
         });
     }

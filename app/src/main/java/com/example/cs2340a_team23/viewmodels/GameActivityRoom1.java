@@ -20,8 +20,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
         Button nextButton = findViewById(R.id.nextbutton);
 
         nextButton.setOnClickListener(view -> {
-            Intent endScreen = new Intent(GameActivityRoom1.this, GameActivityRoom2.class);
-            startActivity(endScreen);
+            Intent room2Screen = new Intent(GameActivityRoom1.this, GameActivityRoom2.class);
+            startActivity(room2Screen);
             finish();
         });
     }
