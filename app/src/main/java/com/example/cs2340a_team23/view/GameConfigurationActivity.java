@@ -49,7 +49,9 @@ public class GameConfigurationActivity extends AppCompatActivity {
                     difficulty = "superHard";
 
                 }
-                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivity.class);
+
+
+                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivityRoom3.class);
 
 
                 int selectedSpriteId = spriteRadioGroup.getCheckedRadioButtonId();
