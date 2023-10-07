@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Player;
+import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 
 public class GameActivityRoom3 extends AppCompatActivity {
 
@@ -17,17 +19,21 @@ public class GameActivityRoom3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_3);
 
+        Player player = Player.getPlayer();
+
+
         TextView playerName = findViewById(R.id.playerName);
-        playerName.setText(getIntent().getStringExtra("playerName"));
+        playerName.setText(player.getPlayerName());
 
         TextView playerHealth = findViewById(R.id.playerHealth);
-        playerHealth.setText("Health: " + getIntent().getStringExtra("health"));
+        playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
         TextView gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(getIntent().getStringExtra("difficulty"));
 
         ImageView playerSprite = findViewById(R.id.playerSprite);
-        String spriteName = getIntent().getStringExtra("sprite");
+        String spriteName = player.getSprite();
+
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
 
