@@ -19,6 +19,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
         nextButton.setOnClickListener(view -> {
             Intent room3Screen = new Intent(GameActivityRoom2.this, GameActivityRoom3.class);
+            room3Screen.putExtra("difficulty", getIntent().getStringExtra("difficulty"));
             startActivity(room3Screen);
             finish();
         });
