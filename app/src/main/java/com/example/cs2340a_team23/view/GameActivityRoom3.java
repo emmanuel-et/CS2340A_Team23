@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Player;
-import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 
 public class GameActivityRoom3 extends AppCompatActivity {
 
@@ -37,7 +36,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
 
-        Button endButton = findViewById(R.id.endButton);endButton.setOnClickListener(view -> {
+        Button endButton = findViewById(R.id.endButton);
+        endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
             startActivity(endScreen);
             finish();
