@@ -1,5 +1,4 @@
 package com.example.cs2340a_team23.model;
-
 public class Player {
     private static Player player = null;
     private int health;
@@ -16,8 +15,7 @@ public class Player {
     }
     public static Player getPlayer() {
         if (player == null) {
-            // Create a new instance if one does not exist
-            player = new Player(100, "DefaultPlayer", "DefaultSprite");
+            player = new Player(100, "DefaultPlayer", "DefaultSprint");
         }
         return player;
     }
@@ -47,5 +45,9 @@ public class Player {
     public static void resetPlayer() {
         player = null;
     }
-
+    public void initializePlayer(String playerName, int health, String sprite) {
+        player.setPlayerName(playerName);
+        player.setHealth(health);
+        player.setSprite(sprite);
+    }
 }
