@@ -1,6 +1,7 @@
 package com.example.cs2340a_team23.view;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
@@ -48,7 +49,7 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 }
 
 
-                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivityRoom3.class);
+                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivityRoom1.class);
 
                 gamePlay.putExtra("health", String.valueOf(health));
                 gamePlay.putExtra("playerName", playerName);
