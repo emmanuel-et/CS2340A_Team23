@@ -1,4 +1,6 @@
 package com.example.cs2340a_team23.viewModel;
+import android.util.Log;
+
 import androidx.lifecycle.ViewModel;
 import com.example.cs2340a_team23.model.Player;
 
@@ -8,9 +10,5 @@ public class PlayerViewModel extends ViewModel {
     public PlayerViewModel() {
         Player player = Player.getPlayer();
     }
-    public void initializePlayer(String playerName, int health, String sprite) {
-        player.setPlayerName(playerName);
-        player.setHealth(health);
-        player.setSprite(sprite);
-    }
+
 }

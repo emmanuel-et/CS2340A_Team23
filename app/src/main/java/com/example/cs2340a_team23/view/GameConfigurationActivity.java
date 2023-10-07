@@ -68,8 +68,9 @@ public class GameConfigurationActivity extends AppCompatActivity {
                     sprite = "";
                     break;
                 }
-                playerViewModel.initializePlayer(playerName, health, sprite);
+                gamePlay.putExtra("difficulty", difficulty);
                 Player player = Player.getPlayer();
+                player.initializePlayer(playerName, health, sprite);
                 startActivity(gamePlay);
                 finish();
             } else {

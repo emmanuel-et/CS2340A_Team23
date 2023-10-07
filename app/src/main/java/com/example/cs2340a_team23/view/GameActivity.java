@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.viewModel.PlayerViewModel;
@@ -25,20 +24,16 @@ public class GameActivity extends AppCompatActivity {
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
-
         TextView playerHealth = findViewById(R.id.playerHealth);
-        playerHealth.setText(player.getHealth());
-
+        playerHealth.setText(Integer.toString(player.getHealth()));
         TextView gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(getIntent().getStringExtra("difficulty"));
-
         ImageView playerSprite = findViewById(R.id.playerSprite);
-        String spriteName = getIntent().getStringExtra("sprite");
+        String spriteName = player.getSprite();
+
         int resID = getResources().getIdentifier(spriteName, "drawable", getPackageName());
         playerSprite.setImageResource(resID);
         Button endButton = findViewById(R.id.endButton);
-        playerViewModel.initializePlayer(player.getPlayerName(), player.getHealth(),
-                player.getSprite());
         endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivity.this, EndActivity.class);
             startActivity(endScreen);
