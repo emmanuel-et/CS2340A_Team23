@@ -26,5 +26,11 @@ public class simiTest21 {
         assertEquals(100, player.getHealth());
     }
 
+    @Test
+    public void testSetSprite() {
+        player.setSprite("NewSprite");
+        assertEquals("NewSprite", player.getSprite());
+    }
+
 
 }
