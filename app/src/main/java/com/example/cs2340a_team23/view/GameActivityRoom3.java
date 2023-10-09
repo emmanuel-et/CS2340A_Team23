@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.Player;
+
+import java.time.LocalTime;
 
 public class GameActivityRoom3 extends AppCompatActivity {
 
@@ -17,7 +21,9 @@ public class GameActivityRoom3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_3);
-
+        GameState gameState = GameState.getGameState();
+        gameState.startScoreTimer();
+        Log.d("TAG3", Integer.toString(GameState.getGameState().getScore()));
         Player player = Player.getPlayer();
 
 
@@ -28,7 +34,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
         playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
         TextView gameDifficulty = findViewById(R.id.gameDifficulty);
-        gameDifficulty.setText(getIntent().getStringExtra("difficulty"));
+        gameDifficulty.setText(gameState.getDifficulty());
 
         ImageView playerSprite = findViewById(R.id.playerSprite);
         String spriteName = player.getSprite();
@@ -39,6 +45,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
         Button endButton = findViewById(R.id.endButton);
         endButton.setOnClickListener(view -> {
             Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
+            gameState.stopScoreTimer();
+            gameState.setTimeEnd(LocalTime.now());
             startActivity(endScreen);
             finish();
         });

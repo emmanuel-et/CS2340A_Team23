@@ -2,11 +2,13 @@ package com.example.cs2340a_team23.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.GameState;
 
 public class GameActivityRoom1 extends AppCompatActivity {
 
@@ -14,12 +16,16 @@ public class GameActivityRoom1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_1);
+        GameState gameState = GameState.getGameState();
+        gameState.startScoreTimer();
+        Log.d("TAG1", Integer.toString(GameState.getGameState().getScore()));
+
 
         Button nextButton = findViewById(R.id.nextbutton);
 
         nextButton.setOnClickListener(view -> {
             Intent room2Screen = new Intent(GameActivityRoom1.this, GameActivityRoom2.class);
-            room2Screen.putExtra("difficulty", getIntent().getStringExtra("difficulty"));
+            gameState.stopScoreTimer();
             startActivity(room2Screen);
             finish();
         });
