@@ -2,7 +2,6 @@ package com.example.cs2340a_team23.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,6 @@ public class GameActivityRoom2 extends AppCompatActivity {
         setContentView(R.layout.activity_room_2);
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
-        Log.d("TAG2", Integer.toString(GameState.getGameState().getScore()));
         Button nextButton = findViewById(R.id.nextbutton2);
 
         nextButton.setOnClickListener(view -> {

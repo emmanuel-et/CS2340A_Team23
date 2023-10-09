@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,7 +22,6 @@ public class GameActivityRoom3 extends AppCompatActivity {
         setContentView(R.layout.activity_room_3);
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
-        Log.d("TAG3", Integer.toString(GameState.getGameState().getScore()));
         Player player = Player.getPlayer();
 
 

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
 import com.example.cs2340a_team23.R;
@@ -16,7 +15,6 @@ public class EndActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
-        Log.d("TAG4", Integer.toString(GameState.getGameState().getScore()));
         Button restartButton = findViewById(R.id.restartButton);
         restartButton.setOnClickListener(view -> {
             Player.resetPlayer();
