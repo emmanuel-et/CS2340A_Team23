@@ -5,16 +5,22 @@ import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-
+import androidx.lifecycle.ViewModelProvider;
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.viewModel.PlayerViewModel;
+import com.example.cs2340a_team23.model.Player;
+
+import java.time.LocalTime;
 
 public class GameConfigurationActivity extends AppCompatActivity {
+    private PlayerViewModel playerViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_configuration);
-
+        playerViewModel = new ViewModelProvider(this).get(PlayerViewModel.class);
         Button playButton = findViewById(R.id.playButton);
         EditText nameInput = findViewById(R.id.nameInput);
         RadioGroup difficultyRadioGroup = findViewById(R.id.difficultyRadioGroup);
@@ -48,18 +54,31 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 }
 
 
-                Intent gamePlay = new Intent(GameConfigurationActivity.this, GameActivityRoom3.class);
+                Intent gamePlay = new Intent(GameConfigurationActivity.this,
+                        GameActivityRoom1.class);
 
-                gamePlay.putExtra("health", String.valueOf(health));
-                gamePlay.putExtra("playerName", playerName);
-                if (selectedSprite == R.id.megamanRadioButton) {
-                    gamePlay.putExtra("sprite", "megaman");
-                } else if (selectedSprite == R.id.marioRadioButton) {
-                    gamePlay.putExtra("sprite", "mario");
-                } else {
-                    gamePlay.putExtra("sprite", "sonic");
+
+                int selectedSpriteId = spriteRadioGroup.getCheckedRadioButtonId();
+                String sprite = "";
+                switch (selectedSpriteId) {
+                case R.id.megamanRadioButton:
+                    sprite = "megaman";
+                    break;
+                case R.id.marioRadioButton:
+                    sprite = "mario";
+                    break;
+                case R.id.sonicRadioButton:
+                    sprite = "sonic";
+                    break;
+                default:
+                    sprite = "";
+                    break;
                 }
-                gamePlay.putExtra("difficulty", difficulty);
+                Player player = Player.getPlayer();
+                player.initializePlayer(playerName, health, sprite);
+                GameState gameState = GameState.getGameState();
+                gameState.setDifficulty(difficulty);
+                gameState.setTimeStart(LocalTime.now());
                 startActivity(gamePlay);
                 finish();
             } else {

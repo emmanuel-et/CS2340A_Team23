@@ -14,15 +14,19 @@ import com.example.cs2340a_team23.model.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.Player;
+
+
 public class EndActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
-
         Button restartButton = findViewById(R.id.restartButton);
         restartButton.setOnClickListener(view -> {
-//            TODO: Call player reset method
+            Player.resetPlayer();
+            GameState.resetGameState();
             Intent gameConfig = new Intent(EndActivity.this, GameConfigurationActivity.class);
             startActivity(gameConfig);
             finish();
