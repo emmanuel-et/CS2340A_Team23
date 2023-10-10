@@ -12,7 +12,6 @@ import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class EndActivity extends AppCompatActivity {
@@ -29,26 +28,18 @@ public class EndActivity extends AppCompatActivity {
             finish();
         });
 
-        ArrayList<LeaderboardEntry> entries = new ArrayList<>();
         LeaderboardEntry mario = new LeaderboardEntry("Mario", 100);
         LeaderboardEntry sonic = new LeaderboardEntry("Sonic", 200);
-        entries.add(mario);
-        entries.add(sonic);
-
-        Comparator<LeaderboardEntry> scoreComparator = new Comparator<LeaderboardEntry>() {
-            @Override
-            public int compare(LeaderboardEntry entry1, LeaderboardEntry entry2) {
-                // Compare in descending order by score
-                return Integer.compare(entry2.getScore(), entry1.getScore());
-            }
-        };
-
-// Sort the leaderboardEntries list using the custom Comparator
-        Collections.sort(entries, scoreComparator);
+        LeaderboardEntry megaman = new LeaderboardEntry("Megaman", 50);
+        Leaderboard leaderboard = Leaderboard.getLeaderboard();
+        leaderboard.addEntry(mario);
+        leaderboard.addEntry(megaman);
+        leaderboard.addEntry(sonic);
+        leaderboard.sortEntriesByScoreDescending();
 
 
         ListView leaderboardListView = findViewById(R.id.leaderboardListView);
-        LeaderboardAdapter adapter = new LeaderboardAdapter(this, entries); // Replace with your data source
+        LeaderboardAdapter adapter = new LeaderboardAdapter(this, leaderboard.getEntries()); // Replace with your data source
         leaderboardListView.setAdapter(adapter);
 
 
