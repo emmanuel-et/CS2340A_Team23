@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/lib/android.support.v7.widget.GridLayout"
     xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.GameActivityRoom3">
@@ -11,15 +12,11 @@
         android:id="@+id/roomTileMap"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
         app2:columnCount="6"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
         app2:rowCount="10"
-        app:columnCount="6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="10">
+        tools:visibility="gone">
 
         <ImageView
             android:id="@+id/room3Tile0"
@@ -207,21 +204,21 @@
             android:id="@+id/room3Tile26"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile27"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile28"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
@@ -235,35 +232,35 @@
             android:id="@+id/room3Tile30"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile31"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile32"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            app2:srcCompat="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile33"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile34"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            app2:srcCompat="@drawable/wall_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
@@ -277,35 +274,35 @@
             android:id="@+id/room3Tile36"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile37"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile38"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile39"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile40"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
@@ -319,35 +316,35 @@
             android:id="@+id/room3Tile42"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile43"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile44"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile45"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile46"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
@@ -361,35 +358,35 @@
             android:id="@+id/room3Tile48"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile49"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile50"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile51"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
             android:id="@+id/room3Tile52"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
+            android:src="@drawable/ground_tile"
             app:srcCompat="@drawable/ground_tile" />
 
         <ImageView
@@ -446,77 +443,63 @@
         android:id="@+id/gameView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="247dp" />
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/vt323"
         android:text=""
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerSprite"
-        app:layout_constraintVertical_bias="0.0" />
+        app2:layout_constraintEnd_toEndOf="@+id/gameView"
+        app2:layout_constraintStart_toStartOf="@+id/gameView"
+        app2:layout_constraintTop_toBottomOf="@+id/playerSprite" />
 
     <ImageView
         android:id="@+id/playerSprite"
         android:layout_width="72dp"
         android:layout_height="96dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="128dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="151dp" />
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playerHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/vt323"
         android:text=""
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/playerName"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textColor="@color/white"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/gameDifficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="341dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/vt323"
         android:text=""
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/playerSprite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textColor="@color/white"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/endButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="340dp"
         android:text="END"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerName"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_constraintEnd_toEndOf="parent"
-        tools:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_constraintStart_toStartOf="parent"
-        tools:layout_constraintTop_toBottomOf="@+id/playerName" />
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
