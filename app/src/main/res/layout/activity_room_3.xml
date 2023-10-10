@@ -1,17 +1,453 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/lib/android.support.v7.widget.GridLayout"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.GameActivityRoom3">
 
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/roomTileMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app2:columnCount="6"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:rowCount="10"
+        app:columnCount="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="10">
+
+        <ImageView
+            android:id="@+id/room3Tile0"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile1"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile2"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile3"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile4"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile5"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile6"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile7"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile8"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile9"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile10"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile11"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile12"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile13"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile14"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile15"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile16"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile17"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile18"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile19"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile20"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile21"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile22"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile23"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile24"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile25"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ground_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile26"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile27"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile28"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile29"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile30"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile31"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile32"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile33"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile34"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile35"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile36"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile37"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile38"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile39"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile40"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile41"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile42"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile43"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile44"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile45"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile46"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile47"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile48"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile49"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile50"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile51"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile52"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile53"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile54"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile55"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile56"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile57"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile58"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room3Tile59"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/wall_tile"
+            app:srcCompat="@drawable/wall_tile" />
+    </androidx.gridlayout.widget.GridLayout>
+
     <View
         android:id="@+id/gameView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <TextView
         android:id="@+id/playerName"
@@ -29,11 +465,12 @@
         android:id="@+id/playerSprite"
         android:layout_width="72dp"
         android:layout_height="96dp"
-        android:layout_marginTop="300dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="151dp" />
 
     <TextView
         android:id="@+id/playerHealth"
