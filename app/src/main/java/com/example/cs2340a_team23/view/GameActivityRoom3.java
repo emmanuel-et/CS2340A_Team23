@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +17,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class GameActivityRoom3 extends AppCompatActivity {
+    private TextView scoreTextView;
+    private GameState gameState;
+    private Handler scoreUpdateHandler;
+    private Runnable scoreUpdateRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +55,19 @@ public class GameActivityRoom3 extends AppCompatActivity {
             startActivity(endScreen);
             finish();
         });
+
+        scoreTextView = findViewById(R.id.scoreTextView);
+        scoreTextView.setText("Score: " + gameState.getScore());
+        scoreUpdateRunnable = new Runnable() {
+            @Override
+            public void run() {
+                int newScore = gameState.getScore();
+                scoreTextView.setText("Score: "+ newScore);
+                scoreUpdateHandler.postDelayed(this,1000);
+            }
+        };
+        scoreUpdateHandler = new Handler();
+        scoreUpdateHandler.postDelayed(scoreUpdateRunnable,1000);
     }
+
 }

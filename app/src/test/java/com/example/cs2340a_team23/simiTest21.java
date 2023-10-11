@@ -16,7 +16,6 @@ public class simiTest21 {
 
     private Player player;
 
-
     @Before
     public void setUp() {
         player = Player.getPlayer();
