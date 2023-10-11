@@ -1,5 +1,6 @@
 package com.example.cs2340a_team23.model;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -9,6 +10,7 @@ public class GameState {
     private int score;
     private LocalTime timeStart;
     private LocalTime timeEnd;
+    private LocalDate date;
     private Timer scoreTimer;
     private String difficulty;
 
@@ -54,6 +56,10 @@ public class GameState {
     public void setTimeEnd(LocalTime timeEnd) {
         this.timeEnd = timeEnd;
     }
+
+    public LocalDate getDate() { return date; }
+
+    public void setDate(LocalDate date) { this.date = date; }
 
     public String getDifficulty() {
         return difficulty;

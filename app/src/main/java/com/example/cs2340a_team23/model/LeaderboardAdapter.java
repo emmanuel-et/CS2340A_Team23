@@ -43,11 +43,15 @@ public class LeaderboardAdapter extends BaseAdapter {
         }
 
         TextView nameTextView = convertView.findViewById(R.id.nameTextView);
+        TextView dateTextView = convertView.findViewById(R.id.dateTextView);
+        TextView timeTextView = convertView.findViewById(R.id.timeTextView);
         TextView scoreTextView = convertView.findViewById(R.id.scoreTextView);
 
         LeaderboardEntry entry = leaderboardEntries.get(position);
 
         nameTextView.setText(entry.getName());
+        dateTextView.setText(String.valueOf(entry.getDate()));
+        timeTextView.setText(String.valueOf(entry.getEndTime()));
         scoreTextView.setText(String.valueOf(entry.getScore()));
 
         return convertView;

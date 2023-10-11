@@ -32,6 +32,10 @@ public class Leaderboard {
                 return Integer.compare(entry2.getScore(), entry1.getScore());
             }
         });
+
+        if (entries.size() > 5) {
+            entries.remove(5);
+        }
     }
     public List<LeaderboardEntry> getEntries() {
         return entries;
