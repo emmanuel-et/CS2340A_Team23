@@ -510,7 +510,7 @@
         android:layout_marginTop="16dp"
         android:text="Score: 1000"
         android:fontFamily="@font/vt323"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

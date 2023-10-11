@@ -28,7 +28,8 @@ public class EndActivity extends AppCompatActivity {
         restartButton.setOnClickListener(view -> {
             Player.resetPlayer();
             GameState.resetGameState();
-            Intent gameConfig = new Intent(EndActivity.this, GameConfigurationActivity.class);
+            Intent gameConfig = new Intent(EndActivity.this,
+                    GameConfigurationActivity.class);
             startActivity(gameConfig);
             finish();
         });
@@ -41,17 +42,19 @@ public class EndActivity extends AppCompatActivity {
         int playerScore = GameState.getGameState().getScore();
 
         Leaderboard leaderboard = Leaderboard.getLeaderboard();
-        LeaderboardEntry currentGameEntry = new LeaderboardEntry(playerName, date, endTime, playerScore);
+        LeaderboardEntry currentGameEntry = new LeaderboardEntry(playerName, date, endTime,
+                playerScore);
         leaderboard.addEntry(currentGameEntry);
         leaderboard.sortEntriesByScoreDescending();
 
 
 
         ListView leaderboardListView = findViewById(R.id.leaderboardListView);
-        LeaderboardAdapter adapter = new LeaderboardAdapter(this, leaderboard.getEntries()); // Replace with your data source
+        LeaderboardAdapter adapter = new LeaderboardAdapter(this, leaderboard.getEntries());
         leaderboardListView.setAdapter(adapter);
 
-        View headerView = getLayoutInflater().inflate(R.layout.activity_leaderboard_header, null);
+        View headerView = getLayoutInflater().inflate(R.layout.activity_leaderboard_header,
+                null);
         leaderboardListView.addHeaderView(headerView);
 
 

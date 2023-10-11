@@ -6,8 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.example.cs2340a_team23.model.GameState;
-import com.example.cs2340a_team23.model.Player;
-
 
 public class MichaelJUnitTest {
 

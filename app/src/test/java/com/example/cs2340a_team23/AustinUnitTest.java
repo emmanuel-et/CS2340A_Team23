@@ -13,7 +13,7 @@ import java.util.List;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
 
-public class LeaderboardUnitTest {
+public class AustinUnitTest {
     // Create parameters
 
     private String playerName;
@@ -43,7 +43,7 @@ public class LeaderboardUnitTest {
     @Test
     public void checkEntriesSize() {
         assertEquals(1, entries.size());
-}
+    }
 
 
 
