@@ -40,10 +40,9 @@ public class LeaderboardUnitTest {
         firstEntry = entries.get(0);
     }
 
-    // Verify the entry was added
     @Test
     public void checkEntriesSize() {
-        assertEquals(1, entries.size()); // Expecting 1 entry after adding
+        assertEquals(1, entries.size());
 }
 
 
@@ -56,9 +55,5 @@ public class LeaderboardUnitTest {
         assertEquals(endTime.getMinute(), firstEntry.getEndTime().getMinute());
         assertEquals(playerScore, firstEntry.getScore());
     }
-
-
-    // Verify the details of the added entry
-
 
 }

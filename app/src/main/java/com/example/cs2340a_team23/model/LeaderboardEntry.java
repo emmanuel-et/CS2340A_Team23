@@ -34,9 +34,13 @@ public class LeaderboardEntry {
         this.score = score;
     }
 
-    public LocalDate getDate() { return date; }
+    public LocalDate getDate() {
+        return date;
+    }
 
-    public LocalTime getEndTime() { return endTime; }
+    public LocalTime getEndTime() {
+        return endTime;
+    }
 
 
 }
