@@ -7,11 +7,7 @@ import static org.junit.Assert.*;
 import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.Player;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
+
 public class MichaelJUnitTest {
 
     private GameState gameState;
