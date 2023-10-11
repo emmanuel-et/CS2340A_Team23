@@ -46,7 +46,7 @@ public class LeaderboardUnitTest {
 }
 
 
-    // Verify the details of the added entry
+
     @Test
     public void checkEntryData() {
         assertEquals(playerName, firstEntry.getName());
