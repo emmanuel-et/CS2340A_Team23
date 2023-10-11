@@ -12,6 +12,7 @@ import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.Player;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class GameActivityRoom3 extends AppCompatActivity {
@@ -45,6 +46,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
             Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
             gameState.stopScoreTimer();
             gameState.setTimeEnd(LocalTime.now());
+            gameState.setDate(LocalDate.now());
             startActivity(endScreen);
             finish();
         });
