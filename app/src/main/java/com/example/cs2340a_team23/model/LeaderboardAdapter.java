@@ -39,7 +39,8 @@ public class LeaderboardAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.activity_leaderboard_entry, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.activity_leaderboard_entry,
+                    parent, false);
         }
 
         TextView nameTextView = convertView.findViewById(R.id.nameTextView);

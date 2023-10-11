@@ -16,13 +16,13 @@ public class EmmanuelUnitTest {
         player = Player.getPlayer();
     }
     @Test
-    public void playerName_isCorrect() {
+    public void playerNameIsCorrect() {
         player.setPlayerName("Emmanuel");
         assertEquals("Emmanuel", player.getPlayerName());
     }
 
     @Test
-    public void playerSprite_isCorrect() {
+    public void playerSpriteIsCorrect() {
         player.setSprite("mario");
         assertEquals("mario", player.getSprite());
     }

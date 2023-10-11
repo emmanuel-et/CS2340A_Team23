@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 import com.example.cs2340a_team23.model.Player;
 
 
-public class simiTest21 {
+public class SimiUnitTest {
 
 
     private Player player;

@@ -16,13 +16,13 @@ public class MikeAUnitTests {
         player = Player.getPlayer();
     }
     @Test
-    public void setNewHealth_isCorrect() {
+    public void setNewHealthIsCorrect() {
         player.setHealth(300);
         assertEquals(300, player.getHealth());
     }
 
     @Test
-    public void setPlayerNameWithSymbols_isCorrect() {
+    public void setPlayerNameWithSymbolsIsCorrect() {
         player.setPlayerName("???");
         assertEquals("???", player.getPlayerName());
     }

@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 import com.example.cs2340a_team23.model.Player;
 
-public class ShawnaUnitTests {
+public class ShawnaUnitTest {
 
     private Player player;
 

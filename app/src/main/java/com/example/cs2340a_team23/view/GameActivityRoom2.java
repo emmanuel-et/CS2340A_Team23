@@ -30,12 +30,12 @@ public class GameActivityRoom2 extends AppCompatActivity {
             @Override
             public void run() {
                 int newScore = gameState.getScore();
-                scoreTextView.setText("Score: "+ newScore);
-                scoreUpdateHandler.postDelayed(this,1000);
+                scoreTextView.setText("Score: " + newScore);
+                scoreUpdateHandler.postDelayed(this, 1000);
             }
         };
         scoreUpdateHandler = new Handler();
-        scoreUpdateHandler.postDelayed(scoreUpdateRunnable,1000);
+        scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 1000);
 
 
         nextButton.setOnClickListener(view -> {
