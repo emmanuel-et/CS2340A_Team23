@@ -7,8 +7,11 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 import com.example.cs2340a_team23.model.Player;
+
+import java.time.LocalTime;
 
 public class GameConfigurationActivity extends AppCompatActivity {
     private PlayerViewModel playerViewModel;
@@ -71,9 +74,11 @@ public class GameConfigurationActivity extends AppCompatActivity {
                     sprite = "";
                     break;
                 }
-                gamePlay.putExtra("difficulty", difficulty);
                 Player player = Player.getPlayer();
                 player.initializePlayer(playerName, health, sprite);
+                GameState gameState = GameState.getGameState();
+                gameState.setDifficulty(difficulty);
+                gameState.setTimeStart(LocalTime.now());
                 startActivity(gamePlay);
                 finish();
             } else {
