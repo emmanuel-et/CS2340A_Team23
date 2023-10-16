@@ -488,7 +488,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/vt323"
-        android:text="mjkkn"
+        android:text=""
         android:textColor="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

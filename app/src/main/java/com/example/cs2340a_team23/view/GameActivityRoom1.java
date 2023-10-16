@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
@@ -36,30 +38,38 @@ public class GameActivityRoom1 extends AppCompatActivity {
         screenHeight = getResources().getDisplayMetrics().heightPixels;
         player.setPlayerX(screenWidth / 2);
         player.setPlayerY(screenHeight / 2);
-        player.createSpriteView(this, player.getSprite(), player.getPlayerX(), player.getPlayerY());
+        player.createSpriteView(this, player.getSprite(), player.getPlayerX(),
+                player.getPlayerY());
+        player.getSpriteView().setId(View.generateViewId());
         room1.addView(player.getSpriteView());
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
+
+        TextView playerName = findViewById(R.id.playerName);
+        playerName.setText(player.getPlayerName());
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
         scoreUpdateRunnable = new Runnable() {
             @Override
             public void run() {
+                playerName.setX(player.getPlayerX());
+                playerName.setY(player.getPlayerY() + 10);
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
-                scoreUpdateHandler.postDelayed(this, 1000);
+                scoreUpdateHandler.postDelayed(this, 0);
             }
         };
         scoreUpdateHandler = new Handler();
-        scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 1000);
+        scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 0);
 
 
 
         Button nextButton = findViewById(R.id.nextbutton);
 
         nextButton.setOnClickListener(view -> {
-            Intent room2Screen = new Intent(GameActivityRoom1.this, GameActivityRoom2.class);
+            Intent room2Screen = new Intent(GameActivityRoom1.this,
+                    GameActivityRoom2.class);
             gameState.stopScoreTimer();
             startActivity(room2Screen);
             finish();
