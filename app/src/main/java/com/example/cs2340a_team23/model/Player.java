@@ -12,6 +12,9 @@ public class Player {
     private String playerName;
     private String sprite;
     private ImageView spriteView;
+    private MoveBehavior moveBehavior;
+    private float PlayerX;
+    private float PlayerY;
 
 
     private Player(int health, String playerName, String sprite) {
@@ -19,7 +22,9 @@ public class Player {
         this.playerName = playerName;
         this.health = health;
         this.sprite = sprite;
-
+        this.moveBehavior = new Walk();
+        this.PlayerX = 0;
+        this.PlayerY = 0;
     }
     public static Player getPlayer() {
         if (player == null) {
@@ -43,6 +48,22 @@ public class Player {
         this.playerName = playerName;
     }
 
+    public float getPlayerX() {
+        return PlayerX;
+    }
+
+    public void setPlayerX(float playerX) {
+        PlayerX = playerX;
+    }
+
+    public float getPlayerY() {
+        return PlayerY;
+    }
+
+    public void setPlayerY(float playerY) {
+        PlayerY = playerY;
+    }
+
     public String getSprite() {
         return sprite;
     }
@@ -58,9 +79,16 @@ public class Player {
         this.spriteView.setX(X);
         this.spriteView.setY(Y);
     }
-    public void updatePosition(float newX, float newY) {
-        this.spriteView.setX(newX);
-        this.spriteView.setY(newY);
+    public void move(String direction, int screenWidth, int screenHeight) {
+        float[] newPos = moveBehavior.move(this.getPlayerX(), this.getPlayerY(), direction, screenWidth, screenHeight,
+                this.spriteView.getWidth(), this.spriteView.getHeight());
+        this.setPlayerX(newPos[0]);
+        this.setPlayerY(newPos[1]);
+        this.updatePosition();
+    }
+    public void updatePosition() {
+        this.spriteView.setX(this.getPlayerX());
+        this.spriteView.setY(this.getPlayerY());
     }
     public ImageView getSpriteView() {
         return spriteView;
@@ -69,6 +97,15 @@ public class Player {
     public static void resetPlayer() {
         player = null;
     }
+
+    public MoveBehavior getMoveBehavior() {
+        return moveBehavior;
+    }
+
+    public void setMoveBehavior(MoveBehavior moveBehavior) {
+        this.moveBehavior = moveBehavior;
+    }
+
     public void initializePlayer(String playerName, int health, String sprite) {
         player.setPlayerName(playerName);
         player.setHealth(health);

@@ -12,7 +12,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
+import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.Walk;
 
 public class GameActivityRoom1 extends AppCompatActivity {
 
@@ -20,7 +23,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private GameState gameState;
     private Handler scoreUpdateHandler;
     private Runnable scoreUpdateRunnable;
-    private float playerX, playerY;
     Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
@@ -32,9 +34,9 @@ public class GameActivityRoom1 extends AppCompatActivity {
         ConstraintLayout room1 = findViewById(R.id.room1);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
-        playerX = screenWidth / 2;
-        playerY = screenHeight / 2;
-        player.createSpriteView(this, player.getSprite(), playerX, playerY);
+        player.setPlayerX(screenWidth / 2);
+        player.setPlayerY(screenHeight / 2);
+        player.createSpriteView(this, player.getSprite(), player.getPlayerX(), player.getPlayerY());
         room1.addView(player.getSpriteView());
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
@@ -66,31 +68,28 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        int moveDistance = 50;
-
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_LEFT:
-                if (playerX - moveDistance >= 0) {
-                    playerX -= moveDistance;
-                }
+                player.move("left", screenWidth, screenHeight);
                 break;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
-                if (playerX + moveDistance + player.getSpriteView().getWidth() <= screenWidth) {
-                    playerX += moveDistance;
-                }
+                player.move("right", screenWidth, screenHeight);
                 break;
             case KeyEvent.KEYCODE_DPAD_UP:
-                if (playerY - moveDistance >= 0) {
-                    playerY -= moveDistance;
-                }
+                player.move("up", screenWidth, screenHeight);
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
-                if (playerY + moveDistance + player.getSpriteView().getHeight() <= screenHeight) {
-                    playerY += moveDistance;
+                player.move("down", screenWidth, screenHeight);
+                break;
+            case KeyEvent.KEYCODE_1:
+                MoveBehavior currMoveBehavior = player.getMoveBehavior();
+                if (currMoveBehavior.getClass().getSimpleName().equals("Walk")) {
+                    player.setMoveBehavior(new Run());
+                } else {
+                    player.setMoveBehavior(new Walk());
                 }
                 break;
         }
-        player.updatePosition(playerX, playerY);
         return true;
     }
 
