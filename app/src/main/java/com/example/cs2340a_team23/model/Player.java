@@ -1,9 +1,17 @@
 package com.example.cs2340a_team23.model;
+
+import android.content.Context;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.example.cs2340a_team23.R;
+
 public class Player {
     private static Player player = null;
     private int health;
     private String playerName;
     private String sprite;
+    private ImageView spriteView;
 
 
     private Player(int health, String playerName, String sprite) {
@@ -42,6 +50,22 @@ public class Player {
     public void setSprite(String sprite) {
         this.sprite = sprite;
     }
+    public void createSpriteView(Context context, String sprite, float X, float Y) {
+        this.spriteView = new ImageView(context);
+        int resourceId = context.getResources().getIdentifier(sprite, "drawable",
+                context.getPackageName());
+        spriteView.setImageResource(resourceId);
+        this.spriteView.setX(X);
+        this.spriteView.setY(Y);
+    }
+    public void updatePosition(float newX, float newY) {
+        this.spriteView.setX(newX);
+        this.spriteView.setY(newY);
+    }
+    public ImageView getSpriteView() {
+        return spriteView;
+    }
+
     public static void resetPlayer() {
         player = null;
     }
