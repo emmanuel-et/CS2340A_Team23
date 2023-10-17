@@ -1,10 +1,7 @@
 package com.example.cs2340a_team23.model;
 
 import android.content.Context;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import com.example.cs2340a_team23.R;
 
 public class Player {
     private static Player player = null;
@@ -13,8 +10,8 @@ public class Player {
     private String sprite;
     private ImageView spriteView;
     private MoveBehavior moveBehavior;
-    private float PlayerX;
-    private float PlayerY;
+    private float playerX;
+    private float playerY;
 
 
     private Player(int health, String playerName, String sprite) {
@@ -23,8 +20,8 @@ public class Player {
         this.health = health;
         this.sprite = sprite;
         this.moveBehavior = new Walk();
-        this.PlayerX = 0;
-        this.PlayerY = 0;
+        this.playerX = 0;
+        this.playerY = 0;
     }
     public static Player getPlayer() {
         if (player == null) {
@@ -49,19 +46,19 @@ public class Player {
     }
 
     public float getPlayerX() {
-        return PlayerX;
+        return playerX;
     }
 
     public void setPlayerX(float playerX) {
-        PlayerX = playerX;
+        this.playerX = playerX;
     }
 
     public float getPlayerY() {
-        return PlayerY;
+        return playerY;
     }
 
     public void setPlayerY(float playerY) {
-        PlayerY = playerY;
+        this.playerY = playerY;
     }
 
     public String getSprite() {
@@ -71,17 +68,17 @@ public class Player {
     public void setSprite(String sprite) {
         this.sprite = sprite;
     }
-    public void createSpriteView(Context context, String sprite, float X, float Y) {
+    public void createSpriteView(Context context, String sprite, float x, float y) {
         this.spriteView = new ImageView(context);
         int resourceId = context.getResources().getIdentifier(sprite, "drawable",
                 context.getPackageName());
         spriteView.setImageResource(resourceId);
-        this.spriteView.setX(X);
-        this.spriteView.setY(Y);
+        this.spriteView.setX(x);
+        this.spriteView.setY(y);
     }
     public void move(String direction, int screenWidth, int screenHeight) {
-        float[] newPos = moveBehavior.move(this.getPlayerX(), this.getPlayerY(), direction, screenWidth, screenHeight,
-                this.spriteView.getWidth(), this.spriteView.getHeight());
+        float[] newPos = moveBehavior.move(this.getPlayerX(), this.getPlayerY(), direction,
+                screenWidth, screenHeight, this.spriteView.getWidth(), this.spriteView.getHeight());
         this.setPlayerX(newPos[0]);
         this.setPlayerY(newPos[1]);
         this.updatePosition();

@@ -1,7 +1,7 @@
 package com.example.cs2340a_team23.model;
 
 public class Walk implements MoveBehavior {
-    int moveDistance = 50;
+    private int moveDistance = 50;
     @Override
     public float[] move(float xPos, float yPos, String direction, int screenWidth, int screenHeight,
                      int spriteWidth, int spriteHeight) {

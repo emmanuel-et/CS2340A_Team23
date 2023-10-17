@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
@@ -25,7 +24,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private GameState gameState;
     private Handler scoreUpdateHandler;
     private Runnable scoreUpdateRunnable;
-    Player player = Player.getPlayer();
+    private Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
 
@@ -53,8 +52,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
         scoreUpdateRunnable = new Runnable() {
             @Override
             public void run() {
-                playerName.setX(player.getPlayerX());
-                playerName.setY(player.getPlayerY() + 10);
+                playerName.setX(player.getPlayerX() - 20);
+                playerName.setY(player.getPlayerY() + 50);
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
                 scoreUpdateHandler.postDelayed(this, 0);
@@ -71,6 +70,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
             Intent room2Screen = new Intent(GameActivityRoom1.this,
                     GameActivityRoom2.class);
             gameState.stopScoreTimer();
+            playerName.setText("");
+            room1.removeView(player.getSpriteView());
             startActivity(room2Screen);
             finish();
         });
@@ -79,26 +80,28 @@ public class GameActivityRoom1 extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
-            case KeyEvent.KEYCODE_DPAD_LEFT:
-                player.move("left", screenWidth, screenHeight);
-                break;
-            case KeyEvent.KEYCODE_DPAD_RIGHT:
-                player.move("right", screenWidth, screenHeight);
-                break;
-            case KeyEvent.KEYCODE_DPAD_UP:
-                player.move("up", screenWidth, screenHeight);
-                break;
-            case KeyEvent.KEYCODE_DPAD_DOWN:
-                player.move("down", screenWidth, screenHeight);
-                break;
-            case KeyEvent.KEYCODE_1:
-                MoveBehavior currMoveBehavior = player.getMoveBehavior();
-                if (currMoveBehavior.getClass().getSimpleName().equals("Walk")) {
-                    player.setMoveBehavior(new Run());
-                } else {
-                    player.setMoveBehavior(new Walk());
-                }
-                break;
+        case KeyEvent.KEYCODE_DPAD_LEFT:
+            player.move("left", screenWidth, screenHeight);
+            break;
+        case KeyEvent.KEYCODE_DPAD_RIGHT:
+            player.move("right", screenWidth, screenHeight);
+            break;
+        case KeyEvent.KEYCODE_DPAD_UP:
+            player.move("up", screenWidth, screenHeight);
+            break;
+        case KeyEvent.KEYCODE_DPAD_DOWN:
+            player.move("down", screenWidth, screenHeight);
+            break;
+        case KeyEvent.KEYCODE_1:
+            MoveBehavior currMoveBehavior = player.getMoveBehavior();
+            if (currMoveBehavior.getClass().getSimpleName().equals("Walk")) {
+                player.setMoveBehavior(new Run());
+            } else {
+                player.setMoveBehavior(new Walk());
+            }
+            break;
+        default:
+            return false;
         }
         return true;
     }
