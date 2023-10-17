@@ -78,7 +78,7 @@ public class GameState {
         scoreTimer.schedule(new TimerTask() {
             @Override
             public void run() {
-                score -= 5;
+                score = Math.max(0, score - 5);
             }
         }, 0, 5000);
     }

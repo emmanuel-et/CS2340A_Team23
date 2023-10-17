@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/room2"
     tools:context=".view.GameActivityRoom2">
 
     <androidx.gridlayout.widget.GridLayout
@@ -440,6 +441,15 @@
             android:src="@drawable/wall_tile"
             app:srcCompat="@drawable/wall_tile" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/nextbutton2"
