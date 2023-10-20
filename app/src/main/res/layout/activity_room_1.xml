@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/lib/android.support.v7.widget.GridLayout"
     xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/room1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/room1"
     tools:context=".view.GameActivityRoom1">
 
     <Button
@@ -22,466 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/roomTileMap"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app2:columnCount="6"
-        app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toTopOf="parent"
-        app2:rowCount="10"
-        app:columnCount="6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="10">
-
-        <ImageView
-            android:id="@+id/room1Tile0"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile1"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:layout_column="1"
-            app2:layout_row="0"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile2"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile3"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile4"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile5"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile6"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile7"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile8"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile9"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile10"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile11"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile12"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile13"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile14"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile15"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile16"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile17"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile18"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile19"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile20"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile21"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile22"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile23"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile24"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile25"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile26"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile27"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile28"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile29"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile30"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile31"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile32"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile33"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile34"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile35"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile36"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile37"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile38"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile39"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile40"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile41"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile42"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile43"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile44"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile45"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile46"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile47"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile48"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app2:srcCompat="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile"
-            tools:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile49"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile"
-            tools:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile50"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile"
-            tools:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile51"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile"
-            tools:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile52"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile"
-            tools:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile53"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile"
-            tools:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile54"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile55"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile56"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile57"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile58"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room1Tile59"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-    </androidx.gridlayout.widget.GridLayout>
     <TextView
         android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Score: 1000"
         android:fontFamily="@font/vt323"
+        android:text="Score: 1000"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/playerName"
         android:layout_width="wrap_content"
@@ -513,5 +66,1414 @@
         android:textColor="@color/white"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/roomTileMap"
+        android:layout_width="412dp"
+        android:layout_height="730dp"
+        app2:columnCount="10"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/room1Tile0"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile1"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile2"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile3"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile4"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile5"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile6"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile7"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile8"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile9"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile20"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile21"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile22"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile23"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile24"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile25"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile26"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile27"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile28"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile29"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile30"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile31"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile32"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile33"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile34"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile35"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile36"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile37"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile38"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile39"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile40"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile41"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile42"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile43"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile44"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile45"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile46"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile47"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile48"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile49"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile50"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile51"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile52"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile53"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile54"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile55"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile56"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile57"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile58"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile59"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile60"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile61"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile62"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile63"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile64"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile65"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile66"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile67"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile68"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile69"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile70"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile71"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile72"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile73"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile74"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile75"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile76"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile77"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile78"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile79"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile80"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile81"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile82"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile83"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile84"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile85"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile86"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile87"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile88"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile89"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile90"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile91"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile92"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile93"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile94"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile95"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile96"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile97"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile98"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile99"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile100"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile101"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile102"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile103"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile104"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile105"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile106"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile107"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile108"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile109"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile110"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile111"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile112"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile113"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile114"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile115"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile116"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile117"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile118"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile119"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile120"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile121"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile122"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile123"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile124"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile125"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile126"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile127"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile128"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile129"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile130"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile131"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile132"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile133"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile134"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile135"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile136"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile137"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile138"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile139"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile140"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile141"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile142"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile143"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile144"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile145"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile146"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile147"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile148"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile149"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile150"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile151"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile152"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile153"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile154"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile155"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile156"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile157"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile158"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile159"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile160"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile161"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile162"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile163"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile164"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile165"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile166"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile167"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile168"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile169"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile170"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile171"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile172"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile173"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile174"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile175"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile176"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile177"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile178"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile179"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile180"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile181"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile182"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile183"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile184"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile185"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile186"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile187"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile188"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile189"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/ground_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile190"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile191"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile192"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile193"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile194"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile195"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile196"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile197"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile198"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile199"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile200"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile201"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile202"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile203"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile204"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile205"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile206"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile207"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile208"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+
+        <ImageView
+            android:id="@+id/room1Tile209"
+            android:layout_width="41dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/wall_tile" />
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
