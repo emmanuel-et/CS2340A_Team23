@@ -8,437 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".view.GameActivityRoom3">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/roomTileMap"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app2:columnCount="6"
-        app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toTopOf="parent"
-        app2:rowCount="10"
-        tools:visibility="gone">
-
-        <ImageView
-            android:id="@+id/room3Tile0"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile1"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile2"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile3"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile4"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile5"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile6"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile7"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile8"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile9"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile10"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile11"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile12"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile13"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile14"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile15"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile16"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile17"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile18"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile19"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile20"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile21"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile22"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile23"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile24"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile25"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile26"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile27"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile28"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile29"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile30"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile31"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile32"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            app2:srcCompat="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile33"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile34"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            app2:srcCompat="@drawable/wall_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile35"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile36"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile37"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile38"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile39"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile40"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile41"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile42"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile43"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile44"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile45"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile46"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile47"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile48"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile49"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile50"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile51"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile52"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/ground_tile"
-            app:srcCompat="@drawable/ground_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile53"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile54"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile55"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile56"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile57"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile58"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-
-        <ImageView
-            android:id="@+id/room3Tile59"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
-            android:src="@drawable/wall_tile"
-            app:srcCompat="@drawable/wall_tile" />
-    </androidx.gridlayout.widget.GridLayout>
-
     <View
         android:id="@+id/gameView"
         android:layout_width="match_parent"
@@ -501,5 +70,1414 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/roomTileMap"
+        android:layout_width="412dp"
+        android:layout_height="730dp"
+        app2:columnCount="10"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/room3Tile0"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile1"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile2"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile3"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile4"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile5"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile6"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile7"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile8"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile9"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile20"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile21"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile22"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile23"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile24"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile25"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile26"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile27"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile28"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile29"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile30"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile31"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile32"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile33"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile34"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile35"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile36"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile37"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile38"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile39"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile40"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile41"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile42"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile43"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile44"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile45"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile46"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile47"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile48"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile49"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile50"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile51"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile52"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile53"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile54"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile55"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile56"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile57"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile58"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile59"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile60"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile61"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile62"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile63"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile64"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile65"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile66"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile67"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile68"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile69"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile70"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile71"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile72"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile73"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile74"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile75"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile76"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile77"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile78"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile79"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile80"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile81"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile82"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile83"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile84"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile85"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile86"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile87"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile88"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile89"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile90"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile91"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile92"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile93"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile94"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile95"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile96"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile97"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile98"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile99"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile100"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile101"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile102"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile103"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile104"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile105"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile106"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile107"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile108"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile109"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile110"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile111"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile112"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile113"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile114"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile115"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile116"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile117"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile118"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile119"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile120"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile121"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile122"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile123"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile124"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile125"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile126"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile127"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile128"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile129"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile130"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile131"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile132"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile133"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile134"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile135"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile136"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile137"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile138"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall"/>
+
+        <ImageView
+            android:id="@+id/room3Tile139"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile140"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile141"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile142"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile143"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile144"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile145"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile146"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile147"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile148"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile149"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile150"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile151"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile152"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile153"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile154"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile155"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile156"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile157"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile158"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile159"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile160"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile161"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile162"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile163"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile164"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile165"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile166"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile167"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile168"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile169"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile170"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile171"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile172"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile173"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile174"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile175"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile176"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile177"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile178"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile179"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile180"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile181"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile182"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile183"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile184"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile185"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile186"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile187"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_floor" />
+
+        <ImageView
+            android:id="@+id/room3Tile188"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile189"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile190"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile191"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile192"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile193"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile194"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile195"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile196"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile197"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile198"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile199"
+            android:layout_width="41dp"
+            android:layout_height="36.5dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile200"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile201"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile202"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile203"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile204"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile205"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile206"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile207"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile208"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+
+        <ImageView
+            android:id="@+id/room3Tile209"
+            android:layout_width="41dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app2:srcCompat="@drawable/carpet_wall" />
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
