@@ -490,5 +490,28 @@
         android:fontFamily="@font/vt323"
         android:text=""
         android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/playerHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/gameDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

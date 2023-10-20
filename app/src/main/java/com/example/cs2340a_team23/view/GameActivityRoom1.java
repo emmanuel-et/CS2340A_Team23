@@ -47,6 +47,12 @@ public class GameActivityRoom1 extends AppCompatActivity {
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
+        TextView playerHealth = findViewById(R.id.playerHealth);
+        playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
+
+        TextView gameDifficulty = findViewById(R.id.gameDifficulty);
+        gameDifficulty.setText(gameState.getDifficulty());
+
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
         scoreUpdateRunnable = new Runnable() {
