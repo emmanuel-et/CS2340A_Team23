@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.Player;
 
 public class GameActivityRoom1 extends AppCompatActivity {
 
@@ -27,6 +28,13 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
+
+        TextView playerHealth = findViewById(R.id.playerHealth);
+        Player player = Player.getPlayer();
+        playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
+
+        TextView gameDifficulty = findViewById(R.id.gameDifficulty);
+        gameDifficulty.setText(gameState.getDifficulty());
         scoreUpdateRunnable = new Runnable() {
             @Override
             public void run() {
