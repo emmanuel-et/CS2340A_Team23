@@ -76,6 +76,7 @@ public class Player {
         this.spriteView.setX(x);
         this.spriteView.setY(y);
     }
+
     public void move(String direction, int screenWidth, int screenHeight) {
         float[] newPos = moveBehavior.move(this.getPlayerX(), this.getPlayerY(), direction,
                 screenWidth, screenHeight, this.spriteView.getWidth(), this.spriteView.getHeight());

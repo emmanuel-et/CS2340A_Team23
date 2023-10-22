@@ -1,15 +1,18 @@
 package com.example.cs2340a_team23.view;
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.gridlayout.widget.GridLayout;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
@@ -17,6 +20,8 @@ import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.Walk;
+
+import java.util.ArrayList;
 
 public class GameActivityRoom1 extends AppCompatActivity {
 
@@ -27,6 +32,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
+    private ArrayList<Rect> walls = new ArrayList<Rect>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,10 @@ public class GameActivityRoom1 extends AppCompatActivity {
         room1.addView(player.getSpriteView());
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
+
+        walls.add(new Rect(0, 0, 990, 97));
+        walls.add(new Rect(0, 0, 190, 1497));
+        walls.add(new Rect(0, 1397, 990, 1497));
 
         TextView playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
@@ -87,15 +97,24 @@ public class GameActivityRoom1 extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
         case KeyEvent.KEYCODE_DPAD_LEFT:
+            if (player.getPlayerX() - 50 < 210) {
+                return true;
+            }
             player.move("left", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
             player.move("right", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
+            if (player.getPlayerY() - 50 < 147) {
+                return true;
+            }
             player.move("up", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_DOWN:
+            if (player.getPlayerY() + 50 > 1347) {
+                return true;
+            }
             player.move("down", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_1:
@@ -112,8 +131,15 @@ public class GameActivityRoom1 extends AppCompatActivity {
         return true;
     }
 
-
-
+    public boolean checkCollision(Rect collisionBox) {
+        for (Rect wall : walls) {
+            if (wall.intersect(collisionBox)) {
+                System.out.println("Inside");
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }

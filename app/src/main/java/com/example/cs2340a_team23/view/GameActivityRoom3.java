@@ -84,12 +84,21 @@ public class GameActivityRoom3 extends AppCompatActivity {
             player.move("left", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
+            if (player.getPlayerX() + 50 > 830) {
+                return true;
+            }
             player.move("right", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
+            if (player.getPlayerY() - 50 < 147) {
+                return true;
+            }
             player.move("up", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_DOWN:
+            if (player.getPlayerY() + 50 > 1347) {
+                return true;
+            }
             player.move("down", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_1:

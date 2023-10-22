@@ -56,8 +56,6 @@ public class EndActivity extends AppCompatActivity {
         View headerView = getLayoutInflater().inflate(R.layout.activity_leaderboard_header,
                 null);
         leaderboardListView.addHeaderView(headerView);
-
-
     }
 
 
