@@ -32,13 +32,19 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
-    private ArrayList<Rect> walls = new ArrayList<Rect>();
 
+    ConstraintLayout room1;
+
+    TextView playerName;
+
+    TextView playerHealth;
+
+    TextView gameDifficulty;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_1);
-        ConstraintLayout room1 = findViewById(R.id.room1);
+        room1 = findViewById(R.id.room1);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
         player.setPlayerX(screenWidth / 2);
@@ -50,17 +56,13 @@ public class GameActivityRoom1 extends AppCompatActivity {
         GameState gameState = GameState.getGameState();
         gameState.startScoreTimer();
 
-        walls.add(new Rect(0, 0, 990, 97));
-        walls.add(new Rect(0, 0, 190, 1497));
-        walls.add(new Rect(0, 1397, 990, 1497));
-
-        TextView playerName = findViewById(R.id.playerName);
+        playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
-        TextView playerHealth = findViewById(R.id.playerHealth);
+        playerHealth = findViewById(R.id.playerHealth);
         playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
-        TextView gameDifficulty = findViewById(R.id.gameDifficulty);
+        gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(gameState.getDifficulty());
 
         scoreTextView = findViewById(R.id.scoreTextView);
@@ -78,19 +80,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
         scoreUpdateHandler = new Handler();
         scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 0);
 
-
-
-        Button nextButton = findViewById(R.id.nextbutton);
-
-        nextButton.setOnClickListener(view -> {
-            Intent room2Screen = new Intent(GameActivityRoom1.this,
-                    GameActivityRoom2.class);
-            gameState.stopScoreTimer();
-            playerName.setText("");
-            room1.removeView(player.getSpriteView());
-            startActivity(room2Screen);
-            finish();
-        });
     }
 
     @Override
@@ -103,6 +92,15 @@ public class GameActivityRoom1 extends AppCompatActivity {
             player.move("left", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
+            if (player.getPlayerX() == 990.0) {
+                Intent room2Screen = new Intent(GameActivityRoom1.this,
+                        GameActivityRoom2.class);
+                playerName.setText("");
+                room1.removeView(player.getSpriteView());
+                player.setPlayerX(40);
+                startActivity(room2Screen);
+                finish();
+            }
             player.move("right", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
@@ -130,16 +128,5 @@ public class GameActivityRoom1 extends AppCompatActivity {
         }
         return true;
     }
-
-    public boolean checkCollision(Rect collisionBox) {
-        for (Rect wall : walls) {
-            if (wall.intersect(collisionBox)) {
-                System.out.println("Inside");
-                return true;
-            }
-        }
-        return false;
-    }
-
 
 }
