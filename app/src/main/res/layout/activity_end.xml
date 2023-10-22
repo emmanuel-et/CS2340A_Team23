@@ -10,41 +10,37 @@
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="47dp"
         android:text="Restart"
+        app:layout_constraintTop_toBottomOf="@id/leaderboardListView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboardListView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/leaderboardListView"
         android:layout_width="409dp"
         android:layout_height="529dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toTopOf="@id/restartButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/winText" />
+        app:layout_constraintTop_toBottomOf="@id/winText"
+        tools:layout_editor_absoluteY="144dp" />
 
     <TextView
         android:id="@+id/winText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="178dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="128dp"
         android:text="You Win!"
         android:textColor="@color/green"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/leaderboardListView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/leaderboardListView" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
