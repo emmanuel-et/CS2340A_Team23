@@ -53,7 +53,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 player.getPlayerY());
         player.getSpriteView().setId(View.generateViewId());
         room1.addView(player.getSpriteView());
-        GameState gameState = GameState.getGameState();
+        gameState = GameState.getGameState();
         gameState.startScoreTimer();
 
         playerName = findViewById(R.id.playerName);
@@ -95,6 +95,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
             if (player.getPlayerX() == 990.0) {
                 Intent room2Screen = new Intent(GameActivityRoom1.this,
                         GameActivityRoom2.class);
+                gameState.stopScoreTimer();
                 playerName.setText("");
                 room1.removeView(player.getSpriteView());
                 player.setPlayerX(40);

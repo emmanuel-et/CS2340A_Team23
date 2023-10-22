@@ -48,16 +48,6 @@
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/endButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="340dp"
-        android:text="END"
-        app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
@@ -280,7 +270,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile39"
@@ -350,7 +340,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile49"
@@ -420,7 +410,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile59"
@@ -490,7 +480,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile69"
@@ -560,7 +550,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile79"
@@ -630,7 +620,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile89"
@@ -700,7 +690,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile99"
@@ -770,7 +760,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile109"
@@ -840,7 +830,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile119"
@@ -910,7 +900,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile129"
@@ -980,7 +970,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall"/>
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile139"
@@ -1050,7 +1040,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile149"
@@ -1120,7 +1110,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile159"
@@ -1190,7 +1180,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile169"
@@ -1260,7 +1250,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile179"
@@ -1330,7 +1320,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/carpet_wall" />
+            app2:srcCompat="@drawable/ic_launcher_background" />
 
         <ImageView
             android:id="@+id/room3Tile189"

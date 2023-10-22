@@ -44,7 +44,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
         room3 = findViewById(R.id.room3);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
-        GameState gameState = GameState.getGameState();
+        gameState = GameState.getGameState();
         gameState.startScoreTimer();
         room3.addView(player.getSpriteView());
 
@@ -57,17 +57,6 @@ public class GameActivityRoom3 extends AppCompatActivity {
         gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(gameState.getDifficulty());
 
-        Button endButton = findViewById(R.id.endButton);
-        endButton.setOnClickListener(view -> {
-            Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
-            gameState.stopScoreTimer();
-            playerName.setText("");
-            room3.removeView(player.getSpriteView());
-            gameState.setTimeEnd(LocalTime.now());
-            gameState.setDate(LocalDate.now());
-            startActivity(endScreen);
-            finish();
-        });
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());

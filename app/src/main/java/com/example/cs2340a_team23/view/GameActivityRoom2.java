@@ -40,7 +40,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
         room2 = findViewById(R.id.room2);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
-        GameState gameState = GameState.getGameState();
+        gameState = GameState.getGameState();
         gameState.startScoreTimer();
         room2.addView(player.getSpriteView());
 
@@ -77,6 +77,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
             if (player.getPlayerX() == 40) {
                 Intent room1Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom1.class);
+                gameState.stopScoreTimer();
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(990);
@@ -89,6 +90,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
             if (player.getPlayerX() == 990.0) {
                 Intent room3Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom3.class);
+                gameState.stopScoreTimer();
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(40);
