@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
@@ -29,13 +28,13 @@ public class GameActivityRoom3 extends AppCompatActivity {
     private int screenWidth;
     private int screenHeight;
 
-    ConstraintLayout room3;
+    private ConstraintLayout room3;
 
-    TextView playerName;
+    private TextView playerName;
 
-    TextView playerHealth;
+    private TextView playerHealth;
 
-    TextView gameDifficulty;
+    private TextView gameDifficulty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,6 @@ public class GameActivityRoom3 extends AppCompatActivity {
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
         gameState = GameState.getGameState();
-        gameState.startScoreTimer();
         room3.addView(player.getSpriteView());
 
         playerName = findViewById(R.id.playerName);
@@ -90,14 +88,12 @@ public class GameActivityRoom3 extends AppCompatActivity {
             player.move("left", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
-            System.out.println(player.getPlayerX());
             if (player.getPlayerX() + 50 > 870) {
                 return true;
             }
             player.move("right", screenWidth, screenHeight);
             if (player.getPlayerX() == 840.0) {
                 Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
-                gameState.stopScoreTimer();
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
                 gameState.setTimeEnd(LocalTime.now());

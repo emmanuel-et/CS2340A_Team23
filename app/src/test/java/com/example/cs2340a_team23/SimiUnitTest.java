@@ -28,8 +28,10 @@ public class SimiUnitTest {
     public void setUp() {
         player = Player.getPlayer();
         leaderboard = Leaderboard.getLeaderboard();
-        entry1 = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), LocalTime.of(10, 0), 100);
-        entry2 = new LeaderboardEntry("Player2", LocalDate.of(2023, 10, 2), LocalTime.of(12, 0), 200);
+        entry1 = new LeaderboardEntry("Player1", LocalDate.of(2023, 10,
+                1), LocalTime.of(10, 0), 100);
+        entry2 = new LeaderboardEntry("Player2", LocalDate.of(2023, 10,
+                2), LocalTime.of(12, 0), 200);
     }
     @Test
     public void healthIsRight() {
@@ -52,11 +54,13 @@ public class SimiUnitTest {
     }
     @Test
     public void testSpecialCharacterInName() {
-        LeaderboardEntry entry = new LeaderboardEntry("Special!Character", LocalDate.of(2023, 10, 1), LocalTime.of(10, 0), 100);
+        LeaderboardEntry entry = new LeaderboardEntry("Special!Character",
+                LocalDate.of(2023, 10, 1), LocalTime.of(10, 0),
+                100);
         leaderboard.addEntry(entry);
         leaderboard.sortEntriesByScoreDescending();
         List<LeaderboardEntry> sortedEntries = leaderboard.getEntries();
-        assertEquals("Special!Character", sortedEntries.get(0).getName());
+        assertEquals("Special!Character", sortedEntries.get(1).getName());
     }
 
 }

@@ -38,7 +38,8 @@ public class EmmanuelUnitTest {
     }
     @Test
     public void testAddAndRemoveEntry() {
-        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), LocalTime.of(10, 0), 100);
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023,
+                10, 1), LocalTime.of(10, 0), 100);
 
         leaderboard.addEntry(entry);
 
@@ -54,7 +55,8 @@ public class EmmanuelUnitTest {
     }
     @Test
     public void testGetName() {
-        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), LocalTime.of(10, 0), 100);
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023,
+                10, 1), LocalTime.of(10, 0), 100);
         assertEquals("Player1", entry.getName());
     }
 

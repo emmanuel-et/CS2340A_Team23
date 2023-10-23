@@ -1,18 +1,14 @@
 package com.example.cs2340a_team23.view;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.gridlayout.widget.GridLayout;
 
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.GameState;
@@ -20,9 +16,6 @@ import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.Walk;
-
-import java.util.ArrayList;
-
 public class GameActivityRoom1 extends AppCompatActivity {
 
     private TextView scoreTextView;
@@ -33,13 +26,13 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private int screenWidth;
     private int screenHeight;
 
-    ConstraintLayout room1;
+    private ConstraintLayout room1;
 
-    TextView playerName;
+    private TextView playerName;
 
-    TextView playerHealth;
+    private TextView playerHealth;
 
-    TextView gameDifficulty;
+    private TextView gameDifficulty;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +88,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
             if (player.getPlayerX() == 990.0) {
                 Intent room2Screen = new Intent(GameActivityRoom1.this,
                         GameActivityRoom2.class);
-                gameState.stopScoreTimer();
                 playerName.setText("");
                 room1.removeView(player.getSpriteView());
                 player.setPlayerX(40);
