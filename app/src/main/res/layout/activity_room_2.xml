@@ -161,7 +161,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile31"
@@ -224,14 +224,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile40"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile41"
@@ -294,14 +294,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile50"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile51"
@@ -364,14 +364,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile60"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile61"
@@ -434,14 +434,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile70"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile71"
@@ -504,14 +504,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile80"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile81"
@@ -574,14 +574,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile90"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile91"
@@ -644,14 +644,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile100"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile101"
@@ -714,14 +714,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile110"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile111"
@@ -784,14 +784,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile120"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile121"
@@ -854,14 +854,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile130"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile131"
@@ -924,14 +924,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile140"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile141"
@@ -994,14 +994,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile150"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile151"
@@ -1064,14 +1064,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile160"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile161"
@@ -1134,14 +1134,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile170"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile171"
@@ -1204,14 +1204,14 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile180"
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile181"
@@ -1274,7 +1274,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile_brown" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room2Tile190"

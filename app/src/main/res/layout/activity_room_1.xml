@@ -224,7 +224,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile40"
@@ -294,7 +294,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile50"
@@ -364,7 +364,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile60"
@@ -434,7 +434,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile70"
@@ -504,7 +504,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile80"
@@ -574,7 +574,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile90"
@@ -644,7 +644,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile100"
@@ -714,7 +714,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile110"
@@ -784,7 +784,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile120"
@@ -854,7 +854,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile130"
@@ -924,7 +924,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile140"
@@ -994,7 +994,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile150"
@@ -1064,7 +1064,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile160"
@@ -1134,7 +1134,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile170"
@@ -1204,7 +1204,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile180"
@@ -1274,7 +1274,7 @@
             android:layout_width="41dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            app2:srcCompat="@drawable/ground_tile" />
+            app2:srcCompat="@android:drawable/title_bar" />
 
         <ImageView
             android:id="@+id/room1Tile190"
