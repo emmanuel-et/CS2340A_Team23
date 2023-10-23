@@ -53,14 +53,9 @@ public class SimiUnitTest {
         assertEquals("Player1", sortedEntries.get(1).getName());
     }
     @Test
-    public void testSpecialCharacterInName() {
-        LeaderboardEntry entry = new LeaderboardEntry("Special!Character",
-                LocalDate.of(2023, 10, 1), LocalTime.of(10, 0),
-                100);
-        leaderboard.addEntry(entry);
-        leaderboard.sortEntriesByScoreDescending();
-        List<LeaderboardEntry> sortedEntries = leaderboard.getEntries();
-        assertEquals("Special!Character", sortedEntries.get(1).getName());
+    public void testGetEndTime() {
+        LocalTime endTime = LocalTime.of(10, 0);
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), endTime, 100);
+        assertEquals(endTime, entry.getEndTime());
     }
-
 }
