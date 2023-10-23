@@ -37,7 +37,8 @@ public class MichaelJUnitTest {
         int screenHeight = 600;
         int spriteWidth = 50;
         int spriteHeight = 50;
-        float[] newPosition = run.move(initialPosition[0], initialPosition[1], "up", screenWidth, screenHeight, spriteWidth, spriteHeight);
+        float[] newPosition = run.move(initialPosition[0], initialPosition[1], "up",
+                screenWidth, screenHeight, spriteWidth, spriteHeight);
         float[] expectedPosition = {100.0f, 0.0f};
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
     }
@@ -48,7 +49,8 @@ public class MichaelJUnitTest {
         int screenHeight = 600;
         int spriteWidth = 50;
         int spriteHeight = 50;
-        float[] newPosition = run.move(initialPosition[0], initialPosition[1], "down", screenWidth, screenHeight, spriteWidth, spriteHeight);
+        float[] newPosition = run.move(initialPosition[0], initialPosition[1], "down",
+                screenWidth, screenHeight, spriteWidth, spriteHeight);
         float[] expectedPosition = {100.0f, 200.0f};
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
     }

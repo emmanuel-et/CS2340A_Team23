@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,13 +25,13 @@ public class GameActivityRoom2 extends AppCompatActivity {
     private int screenWidth;
     private int screenHeight;
 
-    ConstraintLayout room2;
+    private ConstraintLayout room2;
 
-    TextView playerName;
+    private TextView playerName;
 
-    TextView playerHealth;
+    private TextView playerHealth;
 
-    TextView gameDifficulty;
+    private TextView gameDifficulty;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,6 @@ public class GameActivityRoom2 extends AppCompatActivity {
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
         gameState = GameState.getGameState();
-        gameState.startScoreTimer();
         room2.addView(player.getSpriteView());
 
         playerName = findViewById(R.id.playerName);
@@ -77,7 +75,6 @@ public class GameActivityRoom2 extends AppCompatActivity {
             if (player.getPlayerX() == 40) {
                 Intent room1Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom1.class);
-                gameState.stopScoreTimer();
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(990);
@@ -90,7 +87,6 @@ public class GameActivityRoom2 extends AppCompatActivity {
             if (player.getPlayerX() == 990.0) {
                 Intent room3Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom3.class);
-                gameState.stopScoreTimer();
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(40);
