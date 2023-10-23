@@ -55,5 +55,17 @@ public class AustinUnitTest {
         assertEquals(endTime.getMinute(), firstEntry.getEndTime().getMinute());
         assertEquals(playerScore, firstEntry.getScore());
     }
+    @Test
+    public void testSetName() {
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), LocalTime.of(10, 0), 100);
+        entry.setName("Player2");
+        assertEquals("Player2", entry.getName());
+    }
+    @Test
+    public void testGetDate() {
+        LocalDate date = LocalDate.of(2023, 10, 1);
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", date, LocalTime.of(10, 0), 100);
+        assertEquals(date, entry.getDate());
+    }
 
 }

@@ -8,51 +8,6 @@
     android:id="@+id/room2"
     tools:context=".view.GameActivityRoom2">
 
-    <TextView
-        android:id="@+id/playerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/vt323"
-        android:text=""
-        android:textColor="@color/white" />
-    <TextView
-        android:id="@+id/playerHealth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/vt323"
-        android:text=""
-        android:textColor="@color/white"
-        app2:layout_constraintBottom_toBottomOf="parent"
-        app2:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/gameDifficulty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="370dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/vt323"
-        android:text=""
-        android:textColor="@color/white"
-        app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/scoreTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Score: 1000"
-        android:fontFamily="@font/vt323"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/roomTileMap"
         android:layout_width="412dp"
@@ -1461,5 +1416,50 @@
             android:scaleType="fitXY"
             app2:srcCompat="@drawable/wall_tile" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/gameDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/playerHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/vt323"
+        android:text=""
+        android:textColor="@color/white"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Score: 1000"
+        android:fontFamily="@font/vt323"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
