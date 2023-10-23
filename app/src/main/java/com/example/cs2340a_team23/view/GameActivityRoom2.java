@@ -25,25 +25,32 @@ public class GameActivityRoom2 extends AppCompatActivity {
     private Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
+
+    ConstraintLayout room2;
+
+    TextView playerName;
+
+    TextView playerHealth;
+
+    TextView gameDifficulty;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_2);
-        ConstraintLayout room2 = findViewById(R.id.room2);
+        room2 = findViewById(R.id.room2);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
-        GameState gameState = GameState.getGameState();
+        gameState = GameState.getGameState();
         gameState.startScoreTimer();
         room2.addView(player.getSpriteView());
-        Button nextButton = findViewById(R.id.nextbutton2);
 
-        TextView playerName = findViewById(R.id.playerName);
+        playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
-        TextView playerHealth = findViewById(R.id.playerHealth);
+        playerHealth = findViewById(R.id.playerHealth);
         playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
-        TextView gameDifficulty = findViewById(R.id.gameDifficulty);
+        gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(gameState.getDifficulty());
 
         scoreTextView = findViewById(R.id.scoreTextView);
@@ -61,31 +68,47 @@ public class GameActivityRoom2 extends AppCompatActivity {
         scoreUpdateHandler = new Handler();
         scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 0);
 
-
-        nextButton.setOnClickListener(view -> {
-            Intent room3Screen = new Intent(GameActivityRoom2.this,
-                    GameActivityRoom3.class);
-            gameState.stopScoreTimer();
-            playerName.setText("");
-            room2.removeView(player.getSpriteView());
-            startActivity(room3Screen);
-            finish();
-        });
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
         case KeyEvent.KEYCODE_DPAD_LEFT:
+            if (player.getPlayerX() == 40) {
+                Intent room1Screen = new Intent(GameActivityRoom2.this,
+                        GameActivityRoom1.class);
+                gameState.stopScoreTimer();
+                playerName.setText("");
+                room2.removeView(player.getSpriteView());
+                player.setPlayerX(990);
+                startActivity(room1Screen);
+                finish();
+            }
             player.move("left", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
+            if (player.getPlayerX() == 990.0) {
+                Intent room3Screen = new Intent(GameActivityRoom2.this,
+                        GameActivityRoom3.class);
+                gameState.stopScoreTimer();
+                playerName.setText("");
+                room2.removeView(player.getSpriteView());
+                player.setPlayerX(40);
+                startActivity(room3Screen);
+                finish();
+            }
             player.move("right", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
+            if (player.getPlayerY() - 50 < 147) {
+                return true;
+            }
             player.move("up", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_DOWN:
+            if (player.getPlayerY() + 50 > 1347) {
+                return true;
+            }
             player.move("down", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_1:
