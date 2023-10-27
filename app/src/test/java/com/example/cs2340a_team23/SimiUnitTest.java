@@ -55,7 +55,8 @@ public class SimiUnitTest {
     @Test
     public void testGetEndTime() {
         LocalTime endTime = LocalTime.of(10, 0);
-        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023, 10, 1), endTime, 100);
+        LeaderboardEntry entry = new LeaderboardEntry("Player1", LocalDate.of(2023,
+                10, 1), endTime, 100);
         assertEquals(endTime, entry.getEndTime());
     }
 }
