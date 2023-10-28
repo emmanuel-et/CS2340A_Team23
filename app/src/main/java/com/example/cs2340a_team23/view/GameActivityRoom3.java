@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
-import com.example.cs2340a_team23.model.GorgonWardenCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;

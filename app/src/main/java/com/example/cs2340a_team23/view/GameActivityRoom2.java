@@ -13,15 +13,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
-import com.example.cs2340a_team23.model.GorgonWardenCreator;
-import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.MoltenWaspCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
-import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
-import com.example.cs2340a_team23.model.ZephyrClaw;
 import com.example.cs2340a_team23.model.ZephyrClawCreator;
 
 import java.util.ArrayList;

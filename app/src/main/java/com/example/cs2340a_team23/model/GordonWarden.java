@@ -11,7 +11,8 @@ public class GordonWarden extends Enemy {
     private float enemyY;
     public GordonWarden(float enemyX, float enemyY) {
         this.name = "GordonWarden";
-        //TODO: Check the player strategy for MOVE and RUN only difference is a number that would be useful when giving different speeds for enemies
+        //Check the player strategy for MOVE and RUN only difference is a number that
+        // would be useful when giving different speeds for enemies
         this.speed = 50;
         this.enemyX = enemyX;
         this.enemyY = enemyY;
