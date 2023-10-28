@@ -4,19 +4,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.GorgonWardenCreator;
+import com.example.cs2340a_team23.model.MoltenWasp;
+import com.example.cs2340a_team23.model.MoltenWaspCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
+import com.example.cs2340a_team23.model.ZephyrClaw;
+import com.example.cs2340a_team23.model.ZephyrClawCreator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GameActivityRoom2 extends AppCompatActivity {
+
+    private Random random = new Random();
     private TextView scoreTextView;
     private GameState gameState;
     private Handler scoreUpdateHandler;
@@ -32,6 +46,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
     private TextView playerHealth;
 
     private TextView gameDifficulty;
+    private List<Enemy> enemies = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +54,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
         room2 = findViewById(R.id.room2);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
+        initialiseEnemies();
+        drawEnemies();
         gameState = GameState.getGameState();
         room2.addView(player.getSpriteView());
 
@@ -89,6 +106,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
                         GameActivityRoom3.class);
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
+                removeEnemies();
                 player.setPlayerX(40);
                 startActivity(room3Screen);
                 finish();
@@ -121,5 +139,32 @@ public class GameActivityRoom2 extends AppCompatActivity {
         return true;
     }
 
+    private void initialiseEnemies() {
+        ZephyrClawCreator zephyrClawCreator = new ZephyrClawCreator();
+        float randomX = random.nextInt(948) + 42;
+        float randomY = random.nextInt(1199) + 148;
+        Enemy enemy1 = zephyrClawCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy1);
+
+        MoltenWaspCreator moltenWaspCreator = new MoltenWaspCreator();
+        randomX = random.nextInt(948) + 42;
+        randomY = random.nextInt(1199) + 148;
+        Enemy enemy2 = moltenWaspCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy2);
+    }
+
+    private void drawEnemies() {
+        for (Enemy enemy : enemies) {
+            enemy.createSpriteView(this);
+            enemy.getSpriteView().setId(View.generateViewId());
+            room2.addView(enemy.getSpriteView());
+        }
+    }
+
+    private void removeEnemies() {
+        for (Enemy enemy : enemies) {
+            room2.removeView(enemy.getSpriteView());
+        }
+    }
 
 }
