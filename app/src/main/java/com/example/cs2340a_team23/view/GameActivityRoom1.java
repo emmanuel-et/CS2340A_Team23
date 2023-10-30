@@ -11,13 +11,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.GorgonWardenCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class GameActivityRoom1 extends AppCompatActivity {
 
+    private Random random = new Random();
     private TextView scoreTextView;
     private GameState gameState;
     private Handler scoreUpdateHandler;
@@ -33,6 +42,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private TextView playerHealth;
 
     private TextView gameDifficulty;
+    private List<Enemy> enemies = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +51,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
         room1 = findViewById(R.id.room1);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
+        initialiseEnemies();
+        drawEnemies();
         player.setPlayerX(screenWidth / 2);
         player.setPlayerY(screenHeight / 2);
         player.createSpriteView(this, player.getSprite(), player.getPlayerX(),
@@ -90,6 +103,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
                         GameActivityRoom2.class);
                 playerName.setText("");
                 room1.removeView(player.getSpriteView());
+                removeEnemies();
                 player.setPlayerX(40);
                 startActivity(room2Screen);
                 finish();
@@ -122,4 +136,31 @@ public class GameActivityRoom1 extends AppCompatActivity {
         return true;
     }
 
+    private void initialiseEnemies() {
+        ShadowRevenantCreator shadowRevenantCreator = new ShadowRevenantCreator();
+        float randomX = random.nextInt(679) + 211;
+        float randomY = random.nextInt(1199) + 148;
+        Enemy enemy1 = shadowRevenantCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy1);
+
+        GorgonWardenCreator gorgonWardenCreator = new GorgonWardenCreator();
+        randomX = random.nextInt(679) + 211;
+        randomY = random.nextInt(1199) + 148;
+        Enemy enemy2 = gorgonWardenCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy2);
+    }
+
+    private void drawEnemies() {
+        for (Enemy enemy : enemies) {
+            enemy.createSpriteView(this);
+            enemy.getSpriteView().setId(View.generateViewId());
+            room1.addView(enemy.getSpriteView());
+        }
+    }
+
+    private void removeEnemies() {
+        for (Enemy enemy : enemies) {
+            room1.removeView(enemy.getSpriteView());
+        }
+    }
 }

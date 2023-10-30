@@ -7,19 +7,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.cs2340a_team23.R;
+import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
+import com.example.cs2340a_team23.model.ZephyrClawCreator;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GameActivityRoom3 extends AppCompatActivity {
+
+    private Random random = new Random();
     private TextView scoreTextView;
     private GameState gameState;
     private Handler scoreUpdateHandler;
@@ -35,6 +44,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
     private TextView playerHealth;
 
     private TextView gameDifficulty;
+    private List<Enemy> enemies = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
         room3 = findViewById(R.id.room3);
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
+        initialiseEnemies();
+        drawEnemies();
         gameState = GameState.getGameState();
         room3.addView(player.getSpriteView());
 
@@ -96,6 +108,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
+                removeEnemies();
                 gameState.setTimeEnd(LocalTime.now());
                 gameState.setDate(LocalDate.now());
                 startActivity(endScreen);
@@ -126,5 +139,33 @@ public class GameActivityRoom3 extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    private void initialiseEnemies() {
+        ShadowRevenantCreator shadowRevenantCreator = new ShadowRevenantCreator();
+        float randomX = random.nextInt(798) + 42;
+        float randomY = random.nextInt(1199) + 148;
+        Enemy enemy1 = shadowRevenantCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy1);
+
+        ZephyrClawCreator zephyrClawCreator = new ZephyrClawCreator();
+        randomX = random.nextInt(798) + 42;
+        randomY = random.nextInt(1199) + 148;
+        Enemy enemy2 = zephyrClawCreator.createEnemy(randomX, randomY);
+        enemies.add(enemy2);
+    }
+
+    private void drawEnemies() {
+        for (Enemy enemy : enemies) {
+            enemy.createSpriteView(this);
+            enemy.getSpriteView().setId(View.generateViewId());
+            room3.addView(enemy.getSpriteView());
+        }
+    }
+
+    private void removeEnemies() {
+        for (Enemy enemy : enemies) {
+            room3.removeView(enemy.getSpriteView());
+        }
     }
 }
