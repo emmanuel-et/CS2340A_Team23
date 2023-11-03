@@ -7,13 +7,15 @@ public class GordonWarden extends Enemy {
     private String name;
     private ImageView spriteView;
     private int speed;
+    private MoveBehavior moveBehavior;
     private float enemyX;
     private float enemyY;
     public GordonWarden(float enemyX, float enemyY) {
         this.name = "GordonWarden";
         //Check the player strategy for MOVE and RUN only difference is a number that
         // would be useful when giving different speeds for enemies
-        this.speed = 50;
+        this.speed = 35;
+        this.moveBehavior = new EnemyWalk(this.speed);
         this.enemyX = enemyX;
         this.enemyY = enemyY;
     }
@@ -51,6 +53,18 @@ public class GordonWarden extends Enemy {
         int resourceId = context.getResources().getIdentifier("gordon_warden",
                 "drawable", context.getPackageName());
         spriteView.setImageResource(resourceId);
+        this.spriteView.setX(this.getEnemyX());
+        this.spriteView.setY(this.getEnemyY());
+    }
+
+    public void move(String direction, int screenWidth, int screenHeight) {
+        float[] newPos = moveBehavior.move(this.getEnemyX(), this.getEnemyY(), direction,
+                screenWidth, screenHeight, this.spriteView.getWidth(), this.spriteView.getHeight());
+        this.setEnemyX(newPos[0]);
+        this.setEnemyY(newPos[1]);
+        this.updatePosition();
+    }
+    public void updatePosition() {
         this.spriteView.setX(this.getEnemyX());
         this.spriteView.setY(this.getEnemyY());
     }

@@ -23,6 +23,7 @@ import com.example.cs2340a_team23.model.Walk;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.TimerTask;
 
 public class GameActivityRoom1 extends AppCompatActivity {
 
@@ -61,6 +62,30 @@ public class GameActivityRoom1 extends AppCompatActivity {
         room1.addView(player.getSpriteView());
         gameState = GameState.getGameState();
         gameState.startScoreTimer();
+        gameState.getScoreTimer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                for (Enemy enemy : enemies) {
+                    int movementDirection = random.nextInt(4) + 1;
+                    switch (movementDirection) {
+                        case 1:
+                            enemy.move("left", screenWidth, screenHeight);
+                            break;
+                        case 2:
+                            enemy.move("up", screenWidth, screenHeight);
+                            break;
+                        case 3:
+                            enemy.move("right", screenWidth, screenHeight);
+                            break;
+                        case 4:
+                            enemy.move("down", screenWidth, screenHeight);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }, 0, 500);
 
         playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());

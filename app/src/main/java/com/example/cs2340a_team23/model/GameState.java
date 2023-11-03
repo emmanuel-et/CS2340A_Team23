@@ -64,6 +64,9 @@ public class GameState {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+    public Timer getScoreTimer() {
+        return scoreTimer;
+    }
 
     public String getDifficulty() {
         return difficulty;
