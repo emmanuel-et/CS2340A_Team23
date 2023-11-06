@@ -65,25 +65,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
         gameState.getScoreTimer().schedule(new TimerTask() {
             @Override
             public void run() {
-                for (Enemy enemy : enemies) {
-                    int movementDirection = random.nextInt(4) + 1;
-                    switch (movementDirection) {
-                        case 1:
-                            enemy.move("left", screenWidth, screenHeight);
-                            break;
-                        case 2:
-                            enemy.move("up", screenWidth, screenHeight);
-                            break;
-                        case 3:
-                            enemy.move("right", screenWidth, screenHeight);
-                            break;
-                        case 4:
-                            enemy.move("down", screenWidth, screenHeight);
-                            break;
-                        default:
-                            break;
-                    }
-                }
+                moveEnemies();
             }
         }, 0, 500);
 
@@ -186,6 +168,28 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private void removeEnemies() {
         for (Enemy enemy : enemies) {
             room1.removeView(enemy.getSpriteView());
+        }
+    }
+
+    private void moveEnemies() {
+        for (Enemy enemy : enemies) {
+            int movementDirection = random.nextInt(4) + 1;
+            switch (movementDirection) {
+                case 1:
+                    enemy.move("left", screenWidth, screenHeight);
+                    break;
+                case 2:
+                    enemy.move("up", screenWidth, screenHeight);
+                    break;
+                case 3:
+                    enemy.move("right", screenWidth, screenHeight);
+                    break;
+                case 4:
+                    enemy.move("down", screenWidth, screenHeight);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
