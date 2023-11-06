@@ -23,6 +23,7 @@ import com.example.cs2340a_team23.model.ZephyrClawCreator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.TimerTask;
 
 public class GameActivityRoom2 extends AppCompatActivity {
 
@@ -53,7 +54,12 @@ public class GameActivityRoom2 extends AppCompatActivity {
         initialiseEnemies();
         drawEnemies();
         gameState = GameState.getGameState();
-        room2.addView(player.getSpriteView());
+        gameState.getScoreTimer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                moveEnemies();
+            }
+        }, 0, 500);
 
         playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
@@ -163,4 +169,25 @@ public class GameActivityRoom2 extends AppCompatActivity {
         }
     }
 
+    private void moveEnemies() {
+        for (Enemy enemy : enemies) {
+            int movementDirection = random.nextInt(4) + 1;
+            switch (movementDirection) {
+                case 1:
+                    enemy.move("left", screenWidth, screenHeight);
+                    break;
+                case 2:
+                    enemy.move("up", screenWidth, screenHeight);
+                    break;
+                case 3:
+                    enemy.move("right", screenWidth, screenHeight);
+                    break;
+                case 4:
+                    enemy.move("down", screenWidth, screenHeight);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 }

@@ -25,6 +25,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.TimerTask;
 
 public class GameActivityRoom3 extends AppCompatActivity {
 
@@ -56,6 +57,12 @@ public class GameActivityRoom3 extends AppCompatActivity {
         initialiseEnemies();
         drawEnemies();
         gameState = GameState.getGameState();
+        gameState.getScoreTimer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                moveEnemies();
+            }
+        }, 0, 500);
         room3.addView(player.getSpriteView());
 
         playerName = findViewById(R.id.playerName);
@@ -166,6 +173,28 @@ public class GameActivityRoom3 extends AppCompatActivity {
     private void removeEnemies() {
         for (Enemy enemy : enemies) {
             room3.removeView(enemy.getSpriteView());
+        }
+    }
+
+    private void moveEnemies() {
+        for (Enemy enemy : enemies) {
+            int movementDirection = random.nextInt(4) + 1;
+            switch (movementDirection) {
+                case 1:
+                    enemy.move("left", screenWidth, screenHeight);
+                    break;
+                case 2:
+                    enemy.move("up", screenWidth, screenHeight);
+                    break;
+                case 3:
+                    enemy.move("right", screenWidth, screenHeight);
+                    break;
+                case 4:
+                    enemy.move("down", screenWidth, screenHeight);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
