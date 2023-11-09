@@ -23,7 +23,13 @@ public class EndActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_end);
+        if (GameState.getGameState().getScore() <= 0) {
+            setContentView(R.layout.activity_end_loss);
+        }
+
+        else {
+            setContentView(R.layout.activity_end);
+        }
         Button restartButton = findViewById(R.id.restartButton);
         restartButton.setOnClickListener(view -> {
             Player.resetPlayer();
