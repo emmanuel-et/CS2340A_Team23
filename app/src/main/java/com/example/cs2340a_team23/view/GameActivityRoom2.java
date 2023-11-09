@@ -61,6 +61,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
             }
         }, 0, 500);
 
+        room2.addView(player.getSpriteView());
+
         playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
