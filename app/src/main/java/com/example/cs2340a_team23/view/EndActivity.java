@@ -23,7 +23,7 @@ public class EndActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (GameState.getGameState().getScore() <= 0) {
+        if (GameState.getGameState().getScore() <= 0 || Player.getPlayer().getHealth() <= 0) {
             setContentView(R.layout.activity_end_loss);
         }
         else {
