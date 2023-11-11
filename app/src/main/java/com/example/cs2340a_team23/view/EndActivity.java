@@ -26,7 +26,6 @@ public class EndActivity extends AppCompatActivity {
         if (GameState.getGameState().getScore() <= 0) {
             setContentView(R.layout.activity_end_loss);
         }
-
         else {
             setContentView(R.layout.activity_end);
         }
