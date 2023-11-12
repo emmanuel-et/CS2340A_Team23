@@ -4,8 +4,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+
+import android.content.Intent;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+
+import com.example.cs2340a_team23.model.GordonWarden;
+import com.example.cs2340a_team23.model.MoltenWasp;
+import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.ShadowRevenant;
+import com.example.cs2340a_team23.model.ZephyrClaw;
+import com.example.cs2340a_team23.view.GameConfigurationActivity;
 
 public class MichaelJUnitTest {
 
@@ -16,6 +27,12 @@ public class MichaelJUnitTest {
     public void setUp() {
         gameState = GameState.getGameState();
         run = new Run();
+        GameState gameState = GameState.getGameState();
+        Player player = Player.getPlayer();
+        player.setHealth(100);
+        gameState.setDifficulty("Easy");
+        GameState.resetGameState();
+        Player.resetPlayer();
     }
 
 
@@ -55,8 +72,44 @@ public class MichaelJUnitTest {
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
     }
 
+    @Test
+    public void testCollisionDamageOnHardDifficulty() {
+        GameState.getGameState().setDifficulty("Hard");
+        simulateCollision();
+        assertEquals(70, Player.getPlayer().getHealth());
+    }
+    private void simulateCollision() {
+        int damage;
+        String difficulty = GameState.getGameState().getDifficulty();
+        switch (difficulty) {
+            case "Easy":
+                damage = 10;
+                break;
+            case "Medium":
+                damage = 20;
+                break;
+            case "Hard":
+                damage = 30;
+                break;
+            default:
+                damage = 0;
+                break;
+        }
+        Player.getPlayer().setHealth(Player.getPlayer().getHealth() - damage);
+    }
+
+
+    @Test
+    public void shadowGorden() {
+        ShadowRevenant shadowRevenant = new ShadowRevenant(0, 0);
+        GordonWarden gordonWarden = new GordonWarden(0, 0);
+        assertNotEquals(gordonWarden.getSpeed(), shadowRevenant.getSpeed());
+    }
 
 
 
 
-}
+
+
+
+        }
