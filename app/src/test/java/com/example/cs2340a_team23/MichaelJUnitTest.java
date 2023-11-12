@@ -5,9 +5,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import android.content.Intent;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+
+import com.example.cs2340a_team23.model.GordonWarden;
+import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.ShadowRevenant;
+import com.example.cs2340a_team23.model.ZephyrClaw;
+import com.example.cs2340a_team23.view.GameConfigurationActivity;
 
 public class MichaelJUnitTest {
 
@@ -22,6 +31,8 @@ public class MichaelJUnitTest {
         Player player = Player.getPlayer();
         player.setHealth(100);
         gameState.setDifficulty("Easy");
+        GameState.resetGameState();
+        Player.resetPlayer();
     }
 
 
@@ -86,6 +97,17 @@ public class MichaelJUnitTest {
         }
         Player.getPlayer().setHealth(Player.getPlayer().getHealth() - damage);
     }
+
+
+    @Test
+    public void shadowGorden() {
+        ShadowRevenant shadowRevenant = new ShadowRevenant(0, 0);
+        GordonWarden gordonWarden = new GordonWarden(0, 0);
+        assertNotEquals(gordonWarden.getSpeed(), shadowRevenant.getSpeed());
+    }
+
+
+
 
 
 

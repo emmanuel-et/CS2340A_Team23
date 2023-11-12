@@ -5,9 +5,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import android.view.KeyEvent;
+
+import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.Walk;
+import com.example.cs2340a_team23.model.ZephyrClaw;
 
 public class MikeAUnitTests {
     private Run run;
@@ -54,5 +59,12 @@ public class MikeAUnitTests {
                 screenWidth, screenHeight, spriteWidth, spriteHeight);
         float[] expectedPosition = {0.0f, 100.0f};
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
+    }
+
+    @Test
+    public void zephyrMoltenSpeed() {
+        ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        assertNotEquals(zephyrClaw.getSpeed(), moltenWasp.getSpeed());
     }
 }
