@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+
+import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.GameState;
 
@@ -16,6 +18,10 @@ public class MichaelJUnitTest {
     public void setUp() {
         gameState = GameState.getGameState();
         run = new Run();
+        GameState gameState = GameState.getGameState();
+        Player player = Player.getPlayer();
+        player.setHealth(100);
+        gameState.setDifficulty("Easy");
     }
 
 
@@ -55,8 +61,33 @@ public class MichaelJUnitTest {
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
     }
 
+    @Test
+    public void testCollisionDamageOnHardDifficulty() {
+        GameState.getGameState().setDifficulty("Hard");
+        simulateCollision();
+        assertEquals(70, Player.getPlayer().getHealth());
+    }
+    private void simulateCollision() {
+        int damage;
+        String difficulty = GameState.getGameState().getDifficulty();
+        switch (difficulty) {
+            case "Easy":
+                damage = 10;
+                break;
+            case "Medium":
+                damage = 20;
+                break;
+            case "Hard":
+                damage = 30;
+                break;
+            default:
+                damage = 0;
+                break;
+        }
+        Player.getPlayer().setHealth(Player.getPlayer().getHealth() - damage);
+    }
 
 
 
 
-}
+        }
