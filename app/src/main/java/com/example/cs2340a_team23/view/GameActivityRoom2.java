@@ -32,6 +32,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
     private GameState gameState;
     private Handler scoreUpdateHandler;
     private Runnable scoreUpdateRunnable;
+    private Handler healthUpdateHandler;
+    private Runnable healthUpdateRunnable;
     private Player player = Player.getPlayer();
     private int screenWidth;
     private int screenHeight;
@@ -86,6 +88,15 @@ public class GameActivityRoom2 extends AppCompatActivity {
         };
         scoreUpdateHandler = new Handler();
         scoreUpdateHandler.postDelayed(scoreUpdateRunnable, 0);
+        healthUpdateRunnable = new Runnable() {
+            @Override
+            public void run() {
+                playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
+                healthUpdateHandler.postDelayed(this, 1000); // Update every second
+            }
+        };
+        healthUpdateHandler = new Handler();
+        healthUpdateHandler.postDelayed(healthUpdateRunnable, 0);
 
     }
 
@@ -99,10 +110,13 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(990);
+                player.removeObservers();
                 startActivity(room1Screen);
                 finish();
             }
             player.move("left", screenWidth, screenHeight);
+            player.updatePosition();
+            checkCollisions();
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
             if (player.getPlayerX() == 990.0) {
@@ -112,6 +126,9 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 room2.removeView(player.getSpriteView());
                 removeEnemies();
                 player.setPlayerX(40);
+                player.updatePosition();
+                checkCollisions();
+                player.removeObservers();
                 startActivity(room3Screen);
                 finish();
             }
@@ -119,12 +136,16 @@ public class GameActivityRoom2 extends AppCompatActivity {
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
             if (player.getPlayerY() - 50 < 147) {
+                player.updatePosition();
+                checkCollisions();
                 return true;
             }
             player.move("up", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_DOWN:
             if (player.getPlayerY() + 50 > 1347) {
+                player.updatePosition();
+                checkCollisions();
                 return true;
             }
             player.move("down", screenWidth, screenHeight);
@@ -140,6 +161,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
         default:
             return false;
         }
+        player.updatePosition();
+        checkCollisions();
         return true;
     }
 
@@ -172,24 +195,58 @@ public class GameActivityRoom2 extends AppCompatActivity {
     }
 
     private void moveEnemies() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                for (Enemy enemy : enemies) {
+                    int movementDirection = random.nextInt(4) + 1;
+                    switch (movementDirection) {
+                        case 1:
+                            enemy.move("left", screenWidth, screenHeight);
+                            break;
+                        case 2:
+                            enemy.move("up", screenWidth, screenHeight);
+                            break;
+                        case 3:
+                            enemy.move("right", screenWidth, screenHeight);
+                            break;
+                        case 4:
+                            enemy.move("down", screenWidth, screenHeight);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
+                }
+            }
+        });
+    }
+    private boolean isCollision(float playerX, float playerY, float enemyX, float enemyY) {
+        float playerWidth = 30;
+        float playerHeight = 40;
+        float enemyWidth = 32;
+        float enemyHeight = 32;
+
+        return playerX < enemyX + enemyWidth
+                && playerX + playerWidth > enemyX
+                && playerY < enemyY + enemyHeight
+                && playerY + playerHeight > enemyY;
+    }
+
+    private void checkCollisions() {
+        float playerX = player.getPlayerX();
+        float playerY = player.getPlayerY();
+
         for (Enemy enemy : enemies) {
-            int movementDirection = random.nextInt(4) + 1;
-            switch (movementDirection) {
-                case 1:
-                    enemy.move("left", screenWidth, screenHeight);
-                    break;
-                case 2:
-                    enemy.move("up", screenWidth, screenHeight);
-                    break;
-                case 3:
-                    enemy.move("right", screenWidth, screenHeight);
-                    break;
-                case 4:
-                    enemy.move("down", screenWidth, screenHeight);
-                    break;
-                default:
-                    break;
+            float enemyX = enemy.getEnemyX();
+            float enemyY = enemy.getEnemyY();
+
+            if (isCollision(playerX, playerY, enemyX, enemyY)) {
+                enemy.handleCollision(gameState.getDifficulty());
             }
         }
     }
+
+
 }

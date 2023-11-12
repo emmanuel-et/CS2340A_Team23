@@ -18,6 +18,7 @@ public class ShadowRevenant extends Enemy {
         this.moveBehavior = new EnemyWalk(this.speed);
         this.enemyX = enemyX;
         this.enemyY = enemyY;
+        Player.getPlayer().addObserver(this);
     }
 
     public int getSpeed() {

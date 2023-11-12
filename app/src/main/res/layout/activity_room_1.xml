@@ -1444,7 +1444,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/vt323"
-        android:text=""
+        android:text="Health: 300"
         android:textColor="@color/white"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintStart_toStartOf="parent" />

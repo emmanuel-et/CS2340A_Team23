@@ -3,6 +3,9 @@ package com.example.cs2340a_team23.model;
 import android.content.Context;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
     private static Player player = null;
     private int health;
@@ -12,6 +15,7 @@ public class Player {
     private MoveBehavior moveBehavior;
     private float playerX;
     private float playerY;
+    private List<Enemy> enemyObservers = new ArrayList<>();
 
 
     private Player(int health, String playerName, String sprite) {
@@ -87,7 +91,26 @@ public class Player {
     public void updatePosition() {
         this.spriteView.setX(this.getPlayerX());
         this.spriteView.setY(this.getPlayerY());
+        notifyEnemies();
     }
+    public void addObserver(Enemy observer) {
+        enemyObservers.add(observer);
+    }
+
+    public void removeObservers() {
+        enemyObservers.clear();
+    }
+
+    public void notifyEnemies() {
+        float playerX = getPlayerX();
+        float playerY = getPlayerY();
+
+        for (Enemy observer : enemyObservers) {
+
+            observer.updatePlayerPosition(playerX, playerY);
+        }
+    }
+
     public ImageView getSpriteView() {
         return spriteView;
     }

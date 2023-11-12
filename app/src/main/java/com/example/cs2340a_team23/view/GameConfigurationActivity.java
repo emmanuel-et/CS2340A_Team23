@@ -33,22 +33,18 @@ public class GameConfigurationActivity extends AppCompatActivity {
                 int selectedDifficulty = difficultyRadioGroup.getCheckedRadioButtonId();
                 int selectedSprite = spriteRadioGroup.getCheckedRadioButtonId();
                 String difficulty;
-                int health;
+                int health = 300;
                 if (selectedDifficulty == R.id.easyRadioButton) {
 
                     difficulty = "Easy";
-                    health = 300;
 
                 } else if (selectedDifficulty == R.id.mediumRadioButton) {
-                    health = 200;
                     difficulty = "Medium";
 
                 } else if (selectedDifficulty == R.id.hardRadioButton) {
-                    health = 100;
                     difficulty = "hard";
 
                 } else {
-                    health = 75;
                     difficulty = "superHard";
 
                 }

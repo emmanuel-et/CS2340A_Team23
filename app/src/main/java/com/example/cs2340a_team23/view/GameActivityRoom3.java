@@ -101,10 +101,13 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
                 player.setPlayerX(990);
+                player.removeObservers();
                 startActivity(room2Screen);
                 finish();
             }
             player.move("left", screenWidth, screenHeight);
+            player.updatePosition();
+            checkCollisions();
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
             if (player.getPlayerX() + 50 > 870) {
@@ -116,6 +119,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
                 removeEnemies();
+                player.updatePosition();
+                checkCollisions();
                 gameState.setTimeEnd(LocalTime.now());
                 gameState.setDate(LocalDate.now());
                 startActivity(endScreen);
@@ -124,12 +129,16 @@ public class GameActivityRoom3 extends AppCompatActivity {
             break;
         case KeyEvent.KEYCODE_DPAD_UP:
             if (player.getPlayerY() - 50 < 147) {
+                player.updatePosition();
+                checkCollisions();
                 return true;
             }
             player.move("up", screenWidth, screenHeight);
             break;
         case KeyEvent.KEYCODE_DPAD_DOWN:
             if (player.getPlayerY() + 50 > 1347) {
+                player.updatePosition();
+                checkCollisions();
                 return true;
             }
             player.move("down", screenWidth, screenHeight);
@@ -145,6 +154,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
         default:
             return false;
         }
+        player.updatePosition();
+        checkCollisions();
         return true;
     }
 
@@ -177,23 +188,54 @@ public class GameActivityRoom3 extends AppCompatActivity {
     }
 
     private void moveEnemies() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                for (Enemy enemy : enemies) {
+                    int movementDirection = random.nextInt(4) + 1;
+                    switch (movementDirection) {
+                        case 1:
+                            enemy.move("left", screenWidth, screenHeight);
+                            break;
+                        case 2:
+                            enemy.move("up", screenWidth, screenHeight);
+                            break;
+                        case 3:
+                            enemy.move("right", screenWidth, screenHeight);
+                            break;
+                        case 4:
+                            enemy.move("down", screenWidth, screenHeight);
+                            break;
+                        default:
+                            break;
+                    }
+                    playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
+                }
+            }
+        });
+    }
+    private boolean isCollision(float playerX, float playerY, float enemyX, float enemyY) {
+        float playerWidth = 30;
+        float playerHeight = 40;
+        float enemyWidth = 32;
+        float enemyHeight = 32;
+
+        return playerX < enemyX + enemyWidth
+                && playerX + playerWidth > enemyX
+                && playerY < enemyY + enemyHeight
+                && playerY + playerHeight > enemyY;
+    }
+
+    private void checkCollisions() {
+        float playerX = player.getPlayerX();
+        float playerY = player.getPlayerY();
+
         for (Enemy enemy : enemies) {
-            int movementDirection = random.nextInt(4) + 1;
-            switch (movementDirection) {
-                case 1:
-                    enemy.move("left", screenWidth, screenHeight);
-                    break;
-                case 2:
-                    enemy.move("up", screenWidth, screenHeight);
-                    break;
-                case 3:
-                    enemy.move("right", screenWidth, screenHeight);
-                    break;
-                case 4:
-                    enemy.move("down", screenWidth, screenHeight);
-                    break;
-                default:
-                    break;
+            float enemyX = enemy.getEnemyX();
+            float enemyY = enemy.getEnemyY();
+
+            if (isCollision(playerX, playerY, enemyX, enemyY)) {
+                enemy.handleCollision(gameState.getDifficulty());
             }
         }
     }
