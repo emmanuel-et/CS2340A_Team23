@@ -18,6 +18,7 @@ public class GordonWarden extends Enemy {
         this.moveBehavior = new EnemyWalk(this.speed);
         this.enemyX = enemyX;
         this.enemyY = enemyY;
+        Player.getPlayer().addObserver(this);
     }
 
     public int getSpeed() {
@@ -68,4 +69,5 @@ public class GordonWarden extends Enemy {
         this.spriteView.setX(this.getEnemyX());
         this.spriteView.setY(this.getEnemyY());
     }
+
 }
