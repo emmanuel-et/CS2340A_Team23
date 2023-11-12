@@ -20,6 +20,8 @@ import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClawCreator;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -244,9 +246,23 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
             if (isCollision(playerX, playerY, enemyX, enemyY)) {
                 enemy.handleCollision(gameState.getDifficulty());
+                checkEndDueToHealth();
             }
         }
     }
 
+    private void checkEndDueToHealth() {
+        if (player.getHealth() <= 0) {
+            Intent endScreen = new Intent(GameActivityRoom2.this,
+                    EndActivity.class);
+            playerName.setText("");
+            room2.removeView(player.getSpriteView());
+            removeEnemies();
+            gameState.setTimeEnd(LocalTime.now());
+            gameState.setDate(LocalDate.now());
+            startActivity(endScreen);
+            finish();
+        }
+    }
 
 }

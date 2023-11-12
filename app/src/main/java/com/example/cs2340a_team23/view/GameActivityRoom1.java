@@ -20,6 +20,8 @@ import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -92,7 +94,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
                 scoreUpdateHandler.postDelayed(this, 0);
-
             }
         };
         scoreUpdateHandler = new Handler();
@@ -254,10 +255,24 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
             if (isCollision(playerX, playerY, enemyX, enemyY)) {
                 enemy.handleCollision(gameState.getDifficulty());
+                checkEndDueToHealth();
             }
         }
     }
 
+    private void checkEndDueToHealth() {
+        if (player.getHealth() <= 0) {
+            Intent endScreen = new Intent(GameActivityRoom1.this,
+                    EndActivity.class);
+            playerName.setText("");
+            room1.removeView(player.getSpriteView());
+            removeEnemies();
+            gameState.setTimeEnd(LocalTime.now());
+            gameState.setDate(LocalDate.now());
+            startActivity(endScreen);
+            finish();
+        }
+    }
 
 
 }

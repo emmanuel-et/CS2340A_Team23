@@ -115,7 +115,8 @@ public class GameActivityRoom3 extends AppCompatActivity {
             }
             player.move("right", screenWidth, screenHeight);
             if (player.getPlayerX() == 840.0) {
-                Intent endScreen = new Intent(GameActivityRoom3.this, EndActivity.class);
+                Intent endScreen = new Intent(GameActivityRoom3.this,
+                        EndActivity.class);
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
                 removeEnemies();
@@ -236,7 +237,22 @@ public class GameActivityRoom3 extends AppCompatActivity {
 
             if (isCollision(playerX, playerY, enemyX, enemyY)) {
                 enemy.handleCollision(gameState.getDifficulty());
+                checkEndDueToHealth();
             }
+        }
+    }
+
+    private void checkEndDueToHealth() {
+        if (player.getHealth() <= 0) {
+            Intent endScreen = new Intent(GameActivityRoom3.this,
+                    EndActivity.class);
+            playerName.setText("");
+            room3.removeView(player.getSpriteView());
+            removeEnemies();
+            gameState.setTimeEnd(LocalTime.now());
+            gameState.setDate(LocalDate.now());
+            startActivity(endScreen);
+            finish();
         }
     }
 }
