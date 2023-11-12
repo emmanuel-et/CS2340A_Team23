@@ -110,6 +110,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 playerName.setText("");
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(990);
+                player.removeObservers();
                 startActivity(room1Screen);
                 finish();
             }
@@ -127,6 +128,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 player.setPlayerX(40);
                 player.updatePosition();
                 checkCollisions();
+                player.removeObservers();
                 startActivity(room3Screen);
                 finish();
             }

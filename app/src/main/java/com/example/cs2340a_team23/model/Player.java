@@ -87,7 +87,6 @@ public class Player {
         this.setPlayerX(newPos[0]);
         this.setPlayerY(newPos[1]);
         this.updatePosition();
-        notifyEnemies();
     }
     public void updatePosition() {
         this.spriteView.setX(this.getPlayerX());
@@ -97,7 +96,11 @@ public class Player {
     public void addObserver(Enemy observer) {
         enemyObservers.add(observer);
     }
-    
+
+    public void removeObservers() {
+        enemyObservers.clear();
+    }
+
     public void notifyEnemies() {
         float playerX = getPlayerX();
         float playerY = getPlayerY();

@@ -101,6 +101,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 playerName.setText("");
                 room3.removeView(player.getSpriteView());
                 player.setPlayerX(990);
+                player.removeObservers();
                 startActivity(room2Screen);
                 finish();
             }

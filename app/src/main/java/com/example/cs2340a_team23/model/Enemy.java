@@ -32,28 +32,27 @@ public abstract class Enemy {
 
     public void handleCollision(String difficulty) {
         int healthDeduction;
-
         switch (difficulty.toLowerCase()) {
 
-            case "superhard":
-                healthDeduction = 50;
-                break;
+        case "superhard":
+            healthDeduction = 50;
+            break;
 
-            case "hard":
-                healthDeduction = 40;
-                break;
-            case "medium":
-                healthDeduction = 30;
-                break;
-            case "easy":
-                healthDeduction = 20;
-                break;
-            default:
-                healthDeduction = 20;
-                break;
+        case "hard":
+            healthDeduction = 40;
+            break;
+        case "medium":
+            healthDeduction = 30;
+            break;
+        case "easy":
+            healthDeduction = 20;
+            break;
+
+        default:
+            healthDeduction = 20;
+            break;
 
         }
-        //Player.getPlayer().setHealth(Player.getPlayer().getHealth() - healthDeduction);
         Player player = Player.getPlayer();
         player.setHealth(player.getHealth() - healthDeduction);
     }
@@ -73,7 +72,7 @@ public abstract class Enemy {
         boolean horizontalCollision = playerRight > enemyLeft && playerLeft < enemyRight;
         boolean verticalCollision = playerBottom > enemyTop && playerTop < enemyBottom;
 
-        return horizontalCollision &&verticalCollision;
+        return horizontalCollision && verticalCollision;
 
     }
 

@@ -82,6 +82,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
+
+
         scoreUpdateRunnable = new Runnable() {
             @Override
             public void run() {
@@ -90,6 +92,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
                 scoreUpdateHandler.postDelayed(this, 0);
+
             }
         };
         scoreUpdateHandler = new Handler();
@@ -99,7 +102,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
             @Override
             public void run() {
                 playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
-                healthUpdateHandler.postDelayed(this, 1000); // Update every second
+                healthUpdateHandler.postDelayed(this, 1000);
             }
         };
         healthUpdateHandler = new Handler();
@@ -118,7 +121,6 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 return true;
             }
             player.move("left", screenWidth, screenHeight);
-            player.updatePosition();
             checkCollisions();
             break;
         case KeyEvent.KEYCODE_DPAD_RIGHT:
@@ -131,6 +133,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 player.setPlayerX(40);
                 player.updatePosition();
                 checkCollisions();
+                player.removeObservers();
                 startActivity(room2Screen);
                 finish();
             }
