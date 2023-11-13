@@ -1,13 +1,14 @@
 package com.example.cs2340a_team23;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
-import android.view.KeyEvent;
-
-import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
@@ -67,4 +68,23 @@ public class MikeAUnitTests {
         MoltenWasp moltenWasp = new MoltenWasp(0, 0);
         assertNotEquals(zephyrClaw.getSpeed(), moltenWasp.getSpeed());
     }
+
+    @Test
+    public void testMolGorCollisionSpeed() {
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        GordonWarden gordonWarden = new GordonWarden(0, 0);
+        simulateCollision(moltenWasp, gordonWarden);
+        assertEquals(20.0f, moltenWasp.getSpeed(), 0.01f);
+        assertEquals(35.0f, gordonWarden.getSpeed(), 0.01f);
+    }
+    /**
+     *
+     * @param moltenWasp enemy
+     * @param gordonWarden enemy
+     */
+    private void simulateCollision(MoltenWasp moltenWasp, GordonWarden gordonWarden) {
+        moltenWasp.handleCollision("Medium");
+        gordonWarden.handleCollision("Medium");
+    }
+
 }

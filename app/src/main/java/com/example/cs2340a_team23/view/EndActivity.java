@@ -9,13 +9,16 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.cs2340a_team23.R;
-import com.example.cs2340a_team23.model.*;
+//import com.example.cs2340a_team23.model.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.Leaderboard;
+import com.example.cs2340a_team23.model.LeaderboardAdapter;
+import com.example.cs2340a_team23.model.LeaderboardEntry;
 import com.example.cs2340a_team23.model.Player;
 
 
@@ -25,8 +28,7 @@ public class EndActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if (GameState.getGameState().getScore() <= 0 || Player.getPlayer().getHealth() <= 0) {
             setContentView(R.layout.activity_end_loss);
-        }
-        else {
+        } else {
             setContentView(R.layout.activity_end);
         }
         Button restartButton = findViewById(R.id.restartButton);

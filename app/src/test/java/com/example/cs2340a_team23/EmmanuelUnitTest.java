@@ -1,9 +1,11 @@
 package com.example.cs2340a_team23;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+
 
 import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.Leaderboard;
@@ -77,22 +79,31 @@ public class EmmanuelUnitTest {
         simulateCollision();
         assertEquals(80, Player.getPlayer().getHealth());
     }
+    /**
+     * Simulates a collision between the player and an obstacle or enemy.
+     * Adjusts the player's health based on the current game difficulty level.
+     * The damage inflicted on the player varies according to the difficulty:
+     * - Easy: 10 damage
+     * - Medium: 20 damage
+     * - Hard: 30 damage
+     * If the difficulty is unknown, no damage is applied to the player.
+     */
     private void simulateCollision() {
         int damage;
         String difficulty = GameState.getGameState().getDifficulty();
         switch (difficulty) {
-            case "Easy":
-                damage = 10;
-                break;
-            case "Medium":
-                damage = 20;
-                break;
-            case "Hard":
-                damage = 30;
-                break;
-            default:
-                damage = 0;
-                break;
+        case "Easy":
+            damage = 10;
+            break;
+        case "Medium":
+            damage = 20;
+            break;
+        case "Hard":
+            damage = 30;
+            break;
+        default:
+            damage = 0;
+            break;
         }
         Player.getPlayer().setHealth(Player.getPlayer().getHealth() - damage);
     }
