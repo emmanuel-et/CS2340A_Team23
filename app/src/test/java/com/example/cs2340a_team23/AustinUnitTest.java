@@ -2,18 +2,13 @@ package com.example.cs2340a_team23;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-
-
-import com.example.cs2340a_team23.model.Enemy;
-import com.example.cs2340a_team23.model.EnemyCreator;
-import com.example.cs2340a_team23.model.GameState;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import com.example.cs2340a_team23.model.GordonWarden;
-import com.example.cs2340a_team23.model.GorgonWardenCreator;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
 import com.example.cs2340a_team23.model.MoltenWasp;
@@ -79,7 +74,7 @@ public class AustinUnitTest {
     }
 
     @Test
-    public void MoltenGordenSpeed() {
+    public void moltenGordenSpeed() {
         MoltenWasp moltenWasp = new MoltenWasp(0, 0);
         GordonWarden gordonWarden = new GordonWarden(0, 0);
         assertNotEquals(moltenWasp.getSpeed(), gordonWarden.getSpeed());

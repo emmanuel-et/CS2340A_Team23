@@ -1,11 +1,12 @@
 package com.example.cs2340a_team23;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
-import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
@@ -74,7 +75,11 @@ public class ShawnaUnitTest {
         assertEquals(20.0f, moltenWasp.getSpeed(), 0.01f);
         assertEquals(40.0f, zephyrClaw.getSpeed(), 0.01f);
     }
-
+    /**
+     *
+     * @param zephyrClaw enemy
+     * @param moltenWasp enemy
+     */
     private void simulateCollision(MoltenWasp moltenWasp, ZephyrClaw zephyrClaw) {
         moltenWasp.handleCollision("Medium");
         zephyrClaw.handleCollision("Medium");

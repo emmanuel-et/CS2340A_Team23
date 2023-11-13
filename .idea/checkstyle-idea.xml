@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CheckStyle-IDEA" serialisationVersion="2">
-    <checkstyleVersion>10.3.4</checkstyleVersion>
+    <checkstyleVersion>8.14</checkstyleVersion>
     <scanScope>Everything</scanScope>
     <suppressErrors>true</suppressErrors>
     <copyLibs>true</copyLibs>
@@ -14,6 +14,7 @@
         <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="512b7c84-f9cf-4104-a6b5-c639446dd6a4" type="LOCAL_FILE" scope="All" description="2340">$USER_HOME$/Documents/checkstyle.xml</ConfigurationLocation>
+        <ConfigurationLocation id="8534bda1-3a47-4782-a3fe-3a0b6f33fef0" type="LOCAL_FILE" scope="All" description="checkit">$USER_HOME$/Desktop/CS1332-checkstyle.xml</ConfigurationLocation>
       </list>
     </option>
   </component>

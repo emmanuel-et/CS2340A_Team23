@@ -1,17 +1,18 @@
 package com.example.cs2340a_team23;
 
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
 
-import static org.junit.Assert.*;
+
 
 
 import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
-import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClaw;
@@ -79,6 +80,11 @@ public class SimiUnitTest {
         assertEquals(35.0f, gordonWarden.getSpeed(), 0.01f);
     }
 
+    /**
+     *
+     * @param zephyrClaw enemy
+     * @param gordonWarden enemy
+     */
     private void simulateCollision(ZephyrClaw zephyrClaw, GordonWarden gordonWarden) {
         zephyrClaw.handleCollision("Medium");
         gordonWarden.handleCollision("Medium");
