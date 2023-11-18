@@ -16,7 +16,9 @@ import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ScorePowerup;
 import com.example.cs2340a_team23.model.ShadowRevenantCreator;
+import com.example.cs2340a_team23.model.SpeedPowerup;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClawCreator;
 
@@ -46,6 +48,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
 
     private TextView gameDifficulty;
     private List<Enemy> enemies = new ArrayList<>();
+    private SpeedPowerup speedPowerup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
         gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(gameState.getDifficulty());
 
+        speedPowerup = addSpeedPowerup();
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
@@ -152,12 +156,35 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 player.setMoveBehavior(new Walk());
             }
             break;
+        case KeyEvent.KEYCODE_2:
+            if (isCollision(player.getPlayerX(), player.getPlayerY(),
+                    speedPowerup.getPosX(), speedPowerup.getPosY())) {
+                useSpeedPowerup();
+            }
+            break;
         default:
             return false;
         }
         player.updatePosition();
         checkCollisions();
         return true;
+    }
+
+    private SpeedPowerup addSpeedPowerup() {
+        float randomX = random.nextInt(679) + 211;
+        float randomY = random.nextInt(1199) + 148;
+        SpeedPowerup speedPowerup = new SpeedPowerup(randomX, randomY);
+        speedPowerup.createSpriteView(this);
+        speedPowerup.getSpriteView().setId(View.generateViewId());
+        room3.addView(speedPowerup.getSpriteView());
+        return speedPowerup;
+    }
+
+    private void removeSpeedPowerup() {
+        room3.removeView(speedPowerup.getSpriteView());
+    }
+    private void useSpeedPowerup() {
+        removeSpeedPowerup();
     }
 
     private void initialiseEnemies() {
@@ -244,6 +271,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
 
     private void checkEndDueToHealth() {
         if (player.getHealth() <= 0) {
+            gameState.setScore(0);
             Intent endScreen = new Intent(GameActivityRoom3.this,
                     EndActivity.class);
             playerName.setText("");
