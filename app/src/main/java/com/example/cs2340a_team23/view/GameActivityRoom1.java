@@ -17,6 +17,7 @@ import com.example.cs2340a_team23.model.GorgonWardenCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ScorePowerup;
 import com.example.cs2340a_team23.model.ShadowRevenantCreator;
 import com.example.cs2340a_team23.model.Walk;
 
@@ -47,6 +48,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private TextView playerHealth;
 
     private TextView gameDifficulty;
+    private ScorePowerup scorePowerup;
     private List<Enemy> enemies = new ArrayList<>();
 
     @Override
@@ -84,6 +86,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
+
+        scorePowerup = addScorePowerup();
 
 
         scoreUpdateRunnable = new Runnable() {
@@ -164,12 +168,35 @@ public class GameActivityRoom1 extends AppCompatActivity {
                 player.setMoveBehavior(new Walk());
             }
             break;
+        case KeyEvent.KEYCODE_2:
+            if (isCollision(player.getPlayerX(), player.getPlayerY(),
+                    scorePowerup.getPosX(), scorePowerup.getPosY())) {
+                useScorePowerup();
+            }
+            break;
         default:
             return false;
         }
         player.updatePosition();
         checkCollisions();
         return true;
+    }
+    private ScorePowerup addScorePowerup() {
+        float randomX = random.nextInt(679) + 211;
+        float randomY = random.nextInt(1199) + 148;
+        ScorePowerup scorePowerup = new ScorePowerup(randomX, randomY);
+        scorePowerup.createSpriteView(this);
+        scorePowerup.getSpriteView().setId(View.generateViewId());
+        room1.addView(scorePowerup.getSpriteView());
+        return scorePowerup;
+    }
+
+    private void removeScorePowerup() {
+        room1.removeView(scorePowerup.getSpriteView());
+    }
+    private void useScorePowerup() {
+        removeScorePowerup();
+        gameState.setScore(gameState.getScore() + 20);
     }
 
     private void initialiseEnemies() {
@@ -262,6 +289,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
     private void checkEndDueToHealth() {
         if (player.getHealth() <= 0) {
+            gameState.setScore(0);
             Intent endScreen = new Intent(GameActivityRoom1.this,
                     EndActivity.class);
             playerName.setText("");
