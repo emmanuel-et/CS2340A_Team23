@@ -25,7 +25,7 @@ public class ScorePowerup extends Powerup {
     @Override
     public void createSpriteView(Context context) {
         this.spriteView = new ImageView(context);
-        int resourceId = context.getResources().getIdentifier("scorepowerup",
+        int resourceId = context.getResources().getIdentifier("scorekeeper",
                 "drawable", context.getPackageName());
         spriteView.setImageResource(resourceId);
         this.spriteView.setX(this.posX);
