@@ -10,7 +10,7 @@ public class HealthPowerup extends Powerup {
     private float posY;
 
     public HealthPowerup(float posX, float posY) {
-        this.name = "Speed Boost";
+        this.name = "Health Boost";
         this.posX = posX;
         this.posY = posY;
     }
