@@ -2,16 +2,17 @@ package com.example.cs2340a_team23;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
 
-
+import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
+import com.example.cs2340a_team23.model.MoltenWasp;
 
 public class AustinUnitTest {
     // Create parameters
@@ -69,6 +70,13 @@ public class AustinUnitTest {
                 10, 1), LocalTime.of(10, 0), 100);
         entry.setScore(200);
         assertEquals(200, entry.getScore());
+    }
+
+    @Test
+    public void moltenGordenSpeed() {
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        GordonWarden gordonWarden = new GordonWarden(0, 0);
+        assertNotEquals(moltenWasp.getSpeed(), gordonWarden.getSpeed());
     }
 
 }
