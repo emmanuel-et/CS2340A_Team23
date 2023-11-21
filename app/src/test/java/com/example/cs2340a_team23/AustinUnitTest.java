@@ -86,5 +86,11 @@ public class AustinUnitTest {
         ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
         assertNotEquals(zephyrClaw.getSpeed(), shadowRevenant.getSpeed());
     }
+    @Test
+    public void zephyrBaseSpeed() {
+        ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
+        assertEquals(zephyrClaw.getSpeed(), 40);
+    }
+
 
 }
