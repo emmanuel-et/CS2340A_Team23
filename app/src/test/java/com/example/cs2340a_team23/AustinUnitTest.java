@@ -87,4 +87,16 @@ public class AustinUnitTest {
         assertNotEquals(zephyrClaw.getSpeed(), shadowRevenant.getSpeed());
     }
 
+    @Test
+    public void zephyrBaseSpeed() {
+        ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
+        assertEquals(zephyrClaw.getSpeed(), 40);
+    }
+
+    @Test
+    public void moltenBaseSpeed() {
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        assertEquals(moltenWasp.getSpeed(), 20);
+    }
+
 }

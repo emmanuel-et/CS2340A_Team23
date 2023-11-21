@@ -9,10 +9,12 @@ import org.junit.Test;
 
 
 import com.example.cs2340a_team23.model.GordonWarden;
+import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
 import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.model.ShadowRevenant;
+import com.example.cs2340a_team23.model.ZephyrClaw;
 
 public class MichaelJUnitTest {
 
@@ -109,5 +111,19 @@ public class MichaelJUnitTest {
         ShadowRevenant shadowRevenant = new ShadowRevenant(0, 0);
         GordonWarden gordonWarden = new GordonWarden(0, 0);
         assertNotEquals(gordonWarden.getSpeed(), shadowRevenant.getSpeed());
+    }
+
+    @Test
+    public void zephyrSetSpeed() {
+        ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
+        zephyrClaw.setSpeed(200);
+        assertEquals(zephyrClaw.getSpeed(), 200);
+    }
+
+    @Test
+    public void moltenSetSpeed() {
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        moltenWasp.setSpeed(300);
+        assertEquals(moltenWasp.getSpeed(), 300);
     }
 }
