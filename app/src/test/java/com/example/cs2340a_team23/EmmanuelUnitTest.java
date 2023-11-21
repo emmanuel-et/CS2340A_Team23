@@ -8,6 +8,7 @@ import org.junit.Test;
 
 
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
 import com.example.cs2340a_team23.model.Player;
@@ -112,6 +113,11 @@ public class EmmanuelUnitTest {
     public void shadowBaseSpeed() {
         ShadowRevenant shadowrevenant = new ShadowRevenant(0, 0);
         assertEquals(shadowrevenant.getSpeed(), 30);
+    }
+    @Test
+    public void gordonBaseSpeed() {
+        GordonWarden gordon = new GordonWarden(0, 0);
+        assertEquals(gordon.getSpeed(), 35);
     }
 
 }
