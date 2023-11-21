@@ -3,9 +3,8 @@ package com.example.cs2340a_team23.model;
 public class EnemyWalk implements MoveBehavior {
     private int moveDistance = 0;
 
-    public EnemyWalk(int speed){
-        moveDistance = speed;
-    }
+    public EnemyWalk(int speed) {
+        moveDistance = speed; }
     @Override
     public float[] move(float xPos, float yPos, String direction, int screenWidth, int screenHeight,
                      int spriteWidth, int spriteHeight) {

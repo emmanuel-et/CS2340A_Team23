@@ -13,10 +13,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.cs2340a_team23.R;
 import com.example.cs2340a_team23.model.Enemy;
 import com.example.cs2340a_team23.model.GameState;
+import com.example.cs2340a_team23.model.HealthPowerup;
 import com.example.cs2340a_team23.model.MoltenWaspCreator;
 import com.example.cs2340a_team23.model.MoveBehavior;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ScorePowerup;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClawCreator;
 
@@ -48,6 +50,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
     private TextView gameDifficulty;
     private List<Enemy> enemies = new ArrayList<>();
+    private HealthPowerup healthPowerup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +78,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
         gameDifficulty = findViewById(R.id.gameDifficulty);
         gameDifficulty.setText(gameState.getDifficulty());
+
+        healthPowerup = addHealthPowerup();
 
         scoreTextView = findViewById(R.id.scoreTextView);
         scoreTextView.setText("Score: " + gameState.getScore());
@@ -160,6 +165,12 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 player.setMoveBehavior(new Walk());
             }
             break;
+        case KeyEvent.KEYCODE_2:
+            if (isCollision(player.getPlayerX(), player.getPlayerY(),
+                    healthPowerup.getPosX(), healthPowerup.getPosY())) {
+                useHealthPowerup();
+            }
+            break;
         default:
             return false;
         }
@@ -168,6 +179,23 @@ public class GameActivityRoom2 extends AppCompatActivity {
         return true;
     }
 
+    private HealthPowerup addHealthPowerup() {
+        float randomX = random.nextInt(679) + 211;
+        float randomY = random.nextInt(1199) + 148;
+        HealthPowerup healthPowerup = new HealthPowerup(randomX, randomY);
+        healthPowerup.createSpriteView(this);
+        healthPowerup.getSpriteView().setId(View.generateViewId());
+        room2.addView(healthPowerup.getSpriteView());
+        return healthPowerup;
+    }
+
+    private void removeHealthPowerup() {
+        room2.removeView(healthPowerup.getSpriteView());
+    }
+    private void useHealthPowerup() {
+        removeHealthPowerup();
+        player.setHealth(player.getHealth() + 20);
+    }
     private void initialiseEnemies() {
         ZephyrClawCreator zephyrClawCreator = new ZephyrClawCreator();
         float randomX = random.nextInt(948) + 42;
@@ -253,6 +281,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
     private void checkEndDueToHealth() {
         if (player.getHealth() <= 0) {
+            gameState.setScore(0);
             Intent endScreen = new Intent(GameActivityRoom2.this,
                     EndActivity.class);
             playerName.setText("");

@@ -1,13 +1,17 @@
 package com.example.cs2340a_team23;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 import com.example.cs2340a_team23.model.Leaderboard;
+import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Walk;
+import com.example.cs2340a_team23.model.ZephyrClaw;
 
 public class ShawnaUnitTest {
     private Leaderboard leaderboard;
@@ -55,5 +59,29 @@ public class ShawnaUnitTest {
                 screenWidth, screenHeight, spriteWidth, spriteHeight);
         float[] expectedPosition = {50.0f, 100.0f};
         assertArrayEquals(expectedPosition, newPosition, 0.01F);
+    }
+
+    @Test
+    public void setPlayerNameWithNumbersIsCorrect() {
+        player.setPlayerName("123");
+        assertEquals("123", player.getPlayerName());
+    }
+
+    @Test
+    public void testMolZyCollisionSpeed() {
+        MoltenWasp moltenWasp = new MoltenWasp(0, 0);
+        ZephyrClaw zephyrClaw = new ZephyrClaw(0, 0);
+        simulateCollision(moltenWasp, zephyrClaw);
+        assertEquals(20.0f, moltenWasp.getSpeed(), 0.01f);
+        assertEquals(40.0f, zephyrClaw.getSpeed(), 0.01f);
+    }
+    /**
+     *
+     * @param zephyrClaw enemy
+     * @param moltenWasp enemy
+     */
+    private void simulateCollision(MoltenWasp moltenWasp, ZephyrClaw zephyrClaw) {
+        moltenWasp.handleCollision("Medium");
+        zephyrClaw.handleCollision("Medium");
     }
 }
