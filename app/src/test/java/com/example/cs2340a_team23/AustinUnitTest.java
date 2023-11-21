@@ -2,10 +2,9 @@ package com.example.cs2340a_team23;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import java.util.List;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import com.example.cs2340a_team23.model.GordonWarden;
@@ -14,6 +13,7 @@ import com.example.cs2340a_team23.model.LeaderboardEntry;
 import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.ShadowRevenant;
 import com.example.cs2340a_team23.model.ZephyrClaw;
+
 
 public class AustinUnitTest {
     // Create parameters
