@@ -132,4 +132,7 @@ public class Player {
         player.setHealth(health);
         player.setSprite(sprite);
     }
+
+    public void attack(Enemy enemy) {}
+
 }
