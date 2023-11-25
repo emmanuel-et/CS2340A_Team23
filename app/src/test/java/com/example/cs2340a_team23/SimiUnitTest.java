@@ -14,6 +14,7 @@ import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.LeaderboardEntry;
 import com.example.cs2340a_team23.model.Player;
+import com.example.cs2340a_team23.model.ShadowRevenant;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClaw;
 
@@ -88,5 +89,19 @@ public class SimiUnitTest {
     private void simulateCollision(ZephyrClaw zephyrClaw, GordonWarden gordonWarden) {
         zephyrClaw.handleCollision("Medium");
         gordonWarden.handleCollision("Medium");
+    }
+
+    @Test
+    public void gordonSetNewX() {
+        GordonWarden gordon = new GordonWarden(0, 0);
+        gordon.setEnemyX(400);
+        assertEquals(gordon.getEnemyX(), 400, 0);
+    }
+
+    @Test
+    public void shadowSetNewY() {
+        ShadowRevenant shadow = new ShadowRevenant(0, 0);
+        shadow.setEnemyX(200);
+        assertEquals(shadow.getEnemyX(), 200, 0);
     }
 }

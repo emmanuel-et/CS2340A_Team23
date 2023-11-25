@@ -7,9 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.Leaderboard;
 import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
+import com.example.cs2340a_team23.model.ShadowRevenant;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClaw;
 
@@ -83,5 +85,19 @@ public class ShawnaUnitTest {
     private void simulateCollision(MoltenWasp moltenWasp, ZephyrClaw zephyrClaw) {
         moltenWasp.handleCollision("Medium");
         zephyrClaw.handleCollision("Medium");
+    }
+
+    @Test
+    public void gordonSetNegativeSpeed() {
+        GordonWarden gordon = new GordonWarden(0, 0);
+        gordon.setSpeed(-20);
+        assertEquals(gordon.getSpeed(), -20);
+    }
+
+    @Test
+    public void shadowSetNegativeSpeed() {
+        ShadowRevenant shadow = new ShadowRevenant(0, 0);
+        shadow.setSpeed(-42);
+        assertEquals(shadow.getSpeed(), -42);
     }
 }
