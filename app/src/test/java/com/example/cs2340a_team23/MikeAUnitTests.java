@@ -12,6 +12,7 @@ import com.example.cs2340a_team23.model.GordonWarden;
 import com.example.cs2340a_team23.model.MoltenWasp;
 import com.example.cs2340a_team23.model.Player;
 import com.example.cs2340a_team23.model.Run;
+import com.example.cs2340a_team23.model.ShadowRevenant;
 import com.example.cs2340a_team23.model.Walk;
 import com.example.cs2340a_team23.model.ZephyrClaw;
 
@@ -85,6 +86,20 @@ public class MikeAUnitTests {
     private void simulateCollision(MoltenWasp moltenWasp, GordonWarden gordonWarden) {
         moltenWasp.handleCollision("Medium");
         gordonWarden.handleCollision("Medium");
+    }
+
+    @Test
+    public void gordonSetSpeed() {
+        GordonWarden gordon = new GordonWarden(0, 0);
+        gordon.setSpeed(120);
+        assertEquals(gordon.getSpeed(), 120);
+    }
+
+    @Test
+    public void shadowSetSpeed() {
+        ShadowRevenant shadow = new ShadowRevenant(0, 0);
+        shadow.setSpeed(2);
+        assertEquals(shadow.getSpeed(), 2);
     }
 
 }
