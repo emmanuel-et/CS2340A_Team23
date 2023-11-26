@@ -140,6 +140,7 @@ public class Player {
     public void attack(Enemy enemy) {
 
         enemy.getSpriteView().setVisibility(View.INVISIBLE);
+
         GameState.getGameState().setScore(GameState.getGameState().getScore() + 10);
     }
 
