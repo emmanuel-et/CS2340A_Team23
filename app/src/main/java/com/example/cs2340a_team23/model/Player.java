@@ -1,6 +1,7 @@
 package com.example.cs2340a_team23.model;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -138,7 +139,7 @@ public class Player {
 
     public void attack(Enemy enemy) {
 
-
+        enemy.getSpriteView().setVisibility(View.INVISIBLE);
         GameState.getGameState().setScore(GameState.getGameState().getScore() + 10);
     }
 
