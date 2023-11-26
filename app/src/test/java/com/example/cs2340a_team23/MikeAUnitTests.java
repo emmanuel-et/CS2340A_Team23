@@ -102,4 +102,11 @@ public class MikeAUnitTests {
         assertEquals(shadow.getSpeed(), 2);
     }
 
+    @Test
+    public void shadowSetNegativeSpeed() {
+        ShadowRevenant shadow = new ShadowRevenant(0, 0);
+        shadow.setSpeed(-2);
+        assertEquals(shadow.getSpeed(), -2);
+    }
+
 }
