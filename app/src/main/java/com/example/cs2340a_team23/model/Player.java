@@ -138,6 +138,8 @@ public class Player {
 
     public void attack(Enemy enemy) {
 
+
+        GameState.getGameState().setScore(GameState.getGameState().getScore() + 10);
     }
 
 }
