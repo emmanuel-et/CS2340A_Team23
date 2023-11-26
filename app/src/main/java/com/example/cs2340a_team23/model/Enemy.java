@@ -76,5 +76,9 @@ public abstract class Enemy {
 
     }
 
+    public void destroy() {
+        spriteView = null;
+        Player.getPlayer().removeObservers();
+    }
 
 }
