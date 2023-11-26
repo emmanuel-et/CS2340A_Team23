@@ -100,6 +100,9 @@ public class Player {
     public void removeObservers() {
         enemyObservers.clear();
     }
+    public void removeObserver(Enemy observer) {
+        enemyObservers.remove(observer);
+    }
 
     public void notifyEnemies() {
         float playerX = getPlayerX();
@@ -133,6 +136,8 @@ public class Player {
         player.setSprite(sprite);
     }
 
-    public void attack(Enemy enemy) {}
+    public void attack(Enemy enemy) {
+
+    }
 
 }
