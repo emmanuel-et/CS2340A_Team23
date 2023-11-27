@@ -1,10 +1,14 @@
 package com.example.cs2340a_team23.model;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public abstract class Enemy {
@@ -79,13 +83,33 @@ public abstract class Enemy {
         return horizontalCollision && verticalCollision;
 
     }
-
-
-    public void destroy(ConstraintLayout room) {
+    private boolean isRed = false;
+    private Drawable originalBackground;
+    public void destroy(ConstraintLayout room, AppCompatActivity context) {
         room.removeView(this.getSpriteView());
         spriteView = null;
         Player.getPlayer().removeObserver(this);
         GameState.getGameState().setScore(GameState.getGameState().getScore() + 30);
+
+        if (context != null) {
+            View rootView = context.getWindow().getDecorView().getRootView();
+
+            // Store the original background only if it hasn't been stored yet
+            if (originalBackground == null) {
+                originalBackground = rootView.getBackground().getConstantState().newDrawable();
+            }
+
+            if (!isRed) {
+                rootView.setBackgroundColor(Color.RED);
+                isRed = true;
+
+                new Handler().postDelayed(() -> {
+                    rootView.setBackground(originalBackground); // Revert back to the original background
+                    isRed = false;
+                }, 500); // Reset the background after 500 milliseconds (adjust the duration as needed)
+            }
+        }
+
     }
 
 }
