@@ -114,73 +114,76 @@ public class GameActivityRoom1 extends AppCompatActivity {
         healthUpdateHandler.postDelayed(healthUpdateRunnable, 0);
 
 
-
     }
 
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
-        case KeyEvent.KEYCODE_DPAD_LEFT:
-            if (player.getPlayerX() - 50 < 210) {
-                return true;
-            }
-            player.move("left", screenWidth, screenHeight);
-            checkCollisions();
-            break;
-        case KeyEvent.KEYCODE_DPAD_RIGHT:
-            if (player.getPlayerX() == 990.0) {
-                Intent room2Screen = new Intent(GameActivityRoom1.this,
-                        GameActivityRoom2.class);
-                playerName.setText("");
-                room1.removeView(player.getSpriteView());
-                removeEnemies();
-                player.setPlayerX(40);
-                player.updatePosition();
+            case KeyEvent.KEYCODE_DPAD_LEFT:
+                if (player.getPlayerX() - 50 < 210) {
+                    return true;
+                }
+                player.move("left", screenWidth, screenHeight);
                 checkCollisions();
-                player.removeObservers();
-                startActivity(room2Screen);
-                finish();
-            }
-            player.move("right", screenWidth, screenHeight);
-            break;
-        case KeyEvent.KEYCODE_DPAD_UP:
-            if (player.getPlayerY() - 50 < 147) {
-                player.updatePosition();
-                checkCollisions();
-                return true;
-            }
-            player.move("up", screenWidth, screenHeight);
-            break;
-        case KeyEvent.KEYCODE_DPAD_DOWN:
-            if (player.getPlayerY() + 50 > 1347) {
-                player.updatePosition();
-                checkCollisions();
-                return true;
-            }
-            player.move("down", screenWidth, screenHeight);
-            break;
-        case KeyEvent.KEYCODE_1:
-            MoveBehavior currMoveBehavior = player.getMoveBehavior();
-            if (currMoveBehavior.getClass().getSimpleName().equals("Walk")) {
-                player.setMoveBehavior(new Run());
-            } else {
-                player.setMoveBehavior(new Walk());
-            }
-            break;
-        case KeyEvent.KEYCODE_2:
-            if (isCollision(player.getPlayerX(), player.getPlayerY(),
-                    scorePowerup.getPosX(), scorePowerup.getPosY())) {
-                useScorePowerup();
-            }
-            break;
-        default:
-            return false;
+                break;
+            case KeyEvent.KEYCODE_DPAD_RIGHT:
+                if (player.getPlayerX() == 990.0) {
+                    Intent room2Screen = new Intent(GameActivityRoom1.this,
+                            GameActivityRoom2.class);
+                    playerName.setText("");
+                    room1.removeView(player.getSpriteView());
+                    removeEnemies();
+                    player.setPlayerX(40);
+                    player.updatePosition();
+                    checkCollisions();
+                    player.removeObservers();
+                    startActivity(room2Screen);
+                    finish();
+                }
+                player.move("right", screenWidth, screenHeight);
+                break;
+            case KeyEvent.KEYCODE_DPAD_UP:
+                if (player.getPlayerY() - 50 < 147) {
+                    player.updatePosition();
+                    checkCollisions();
+                    return true;
+                }
+                player.move("up", screenWidth, screenHeight);
+                break;
+            case KeyEvent.KEYCODE_DPAD_DOWN:
+                if (player.getPlayerY() + 50 > 1347) {
+                    player.updatePosition();
+                    checkCollisions();
+                    return true;
+                }
+                player.move("down", screenWidth, screenHeight);
+                break;
+            case KeyEvent.KEYCODE_1:
+                MoveBehavior currMoveBehavior = player.getMoveBehavior();
+                if (currMoveBehavior.getClass().getSimpleName().equals("Walk")) {
+                    player.setMoveBehavior(new Run());
+                } else {
+                    player.setMoveBehavior(new Walk());
+                }
+                break;
+            case KeyEvent.KEYCODE_2:
+                if (isCollision(player.getPlayerX(), player.getPlayerY(),
+                        scorePowerup.getPosX(), scorePowerup.getPosY())) {
+                    useScorePowerup();
+                }
+                break;
+            case KeyEvent.KEYCODE_SPACE:
+                player.getWeapon().attack(player, enemies, room1);
+                break;
+            default:
+                return false;
         }
         player.updatePosition();
         checkCollisions();
         return true;
     }
+
     private ScorePowerup addScorePowerup() {
         float randomX = random.nextInt(679) + 211;
         float randomY = random.nextInt(1199) + 148;
@@ -194,6 +197,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
     private void removeScorePowerup() {
         room1.removeView(scorePowerup.getSpriteView());
     }
+
     private void useScorePowerup() {
         removeScorePowerup();
         gameState.setScore(gameState.getScore() + 20);
@@ -225,6 +229,10 @@ public class GameActivityRoom1 extends AppCompatActivity {
         for (Enemy enemy : enemies) {
             room1.removeView(enemy.getSpriteView());
         }
+    }
+
+    public void removeEnemy(Enemy enemy) {
+        room1.removeView(enemy.getSpriteView());
     }
 
     private void moveEnemies() {
@@ -301,6 +309,5 @@ public class GameActivityRoom1 extends AppCompatActivity {
             finish();
         }
     }
-
 
 }
