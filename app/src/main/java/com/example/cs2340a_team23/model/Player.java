@@ -147,8 +147,4 @@ public class Player {
         player.setSprite(sprite);
     }
 
-//    public void attack(List<Enemy> enemies) {
-//        weapon.attack(this, enemies);
-//    }
-
 }
