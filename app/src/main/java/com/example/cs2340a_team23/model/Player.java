@@ -16,6 +16,7 @@ public class Player {
     private MoveBehavior moveBehavior;
     private float playerX;
     private float playerY;
+    private Weapon weapon;
     private List<Enemy> enemyObservers = new ArrayList<>();
 
 
@@ -27,6 +28,7 @@ public class Player {
         this.moveBehavior = new Walk();
         this.playerX = 0;
         this.playerY = 0;
+        this.weapon = new Weapon();
     }
     public static Player getPlayer() {
         if (player == null) {
@@ -72,6 +74,14 @@ public class Player {
 
     public void setSprite(String sprite) {
         this.sprite = sprite;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
     }
     public void createSpriteView(Context context, String sprite, float x, float y) {
         this.spriteView = new ImageView(context);
@@ -137,11 +147,8 @@ public class Player {
         player.setSprite(sprite);
     }
 
-    public void attack(Enemy enemy) {
-
-        enemy.getSpriteView().setVisibility(View.INVISIBLE);
-
-        GameState.getGameState().setScore(GameState.getGameState().getScore() + 10);
-    }
+//    public void attack(List<Enemy> enemies) {
+//        weapon.attack(this, enemies);
+//    }
 
 }
