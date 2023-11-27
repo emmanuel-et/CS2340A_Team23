@@ -39,21 +39,21 @@ public abstract class Enemy {
         switch (difficulty.toLowerCase()) {
 
         case "superhard":
-            healthDeduction = 50;
+            healthDeduction = 60;
             break;
 
         case "hard":
-            healthDeduction = 40;
+            healthDeduction = 50;
             break;
         case "medium":
-            healthDeduction = 30;
+            healthDeduction = 40;
             break;
         case "easy":
-            healthDeduction = 20;
+            healthDeduction = 30;
             break;
 
         default:
-            healthDeduction = 20;
+            healthDeduction = 30;
             break;
 
         }
