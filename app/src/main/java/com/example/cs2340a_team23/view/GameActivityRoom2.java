@@ -171,6 +171,9 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 useHealthPowerup();
             }
             break;
+        case KeyEvent.KEYCODE_SPACE:
+            player.getWeapon().attack(player, enemies, room2);
+            break;
         default:
             return false;
         }
@@ -293,5 +296,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
             finish();
         }
     }
+
+
 
 }

@@ -11,6 +11,9 @@ import com.example.cs2340a_team23.model.GameState;
 import com.example.cs2340a_team23.viewModel.PlayerViewModel;
 import com.example.cs2340a_team23.model.Player;
 
+import android.view.KeyEvent;
+import android.view.View;
+
 import java.time.LocalTime;
 
 public class GameConfigurationActivity extends AppCompatActivity {
@@ -84,4 +87,5 @@ public class GameConfigurationActivity extends AppCompatActivity {
 
         });
     }
+
 }

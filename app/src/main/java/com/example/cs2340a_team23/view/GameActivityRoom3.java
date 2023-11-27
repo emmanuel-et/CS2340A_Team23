@@ -162,6 +162,9 @@ public class GameActivityRoom3 extends AppCompatActivity {
                 useSpeedPowerup();
             }
             break;
+        case KeyEvent.KEYCODE_SPACE:
+            player.getWeapon().attack(player, enemies, room3);
+            break;
         default:
             return false;
         }
