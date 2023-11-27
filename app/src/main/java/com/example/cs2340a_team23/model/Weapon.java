@@ -1,6 +1,14 @@
 package com.example.cs2340a_team23.model;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.cs2340a_team23.view.GameActivityRoom1;
 
 import java.util.List;
 
@@ -15,10 +23,10 @@ public class Weapon {
         return range;
     }
 
-    public void attack(Player player, List<Enemy> enemies, ConstraintLayout room) {
+    public void attack(Player player, List<Enemy> enemies, ConstraintLayout room, AppCompatActivity context) {
         Enemy enemy = checkAttackDistance(player, enemies);
         if (enemy != null) {
-            enemy.destroy(room);
+            enemy.destroy(room, context);
         }
     }
 

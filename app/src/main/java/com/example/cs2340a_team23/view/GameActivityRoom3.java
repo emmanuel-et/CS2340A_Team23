@@ -163,7 +163,7 @@ public class GameActivityRoom3 extends AppCompatActivity {
             }
             break;
         case KeyEvent.KEYCODE_SPACE:
-            player.getWeapon().attack(player, enemies, room3);
+            player.getWeapon().attack(player, enemies, room3, GameActivityRoom3.this);
             break;
         default:
             return false;
