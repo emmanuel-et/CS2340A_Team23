@@ -1,7 +1,11 @@
 package com.example.cs2340a_team23.model;
 
 import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public abstract class Enemy {
     private String name;
@@ -76,9 +80,12 @@ public abstract class Enemy {
 
     }
 
-    public void destroy() {
+
+    public void destroy(ConstraintLayout room) {
+        room.removeView(this.getSpriteView());
         spriteView = null;
-        Player.getPlayer().removeObservers();
+        Player.getPlayer().removeObserver(this);
+        GameState.getGameState().setScore(GameState.getGameState().getScore() + 30);
     }
 
 }
