@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +47,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
 
     private TextView playerName;
 
+    private ImageView swordImage;
+
     private TextView playerHealth;
 
     private TextView gameDifficulty;
@@ -73,6 +76,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
         playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
+        swordImage = findViewById(R.id.swordImage);
+
         playerHealth = findViewById(R.id.playerHealth);
         playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
@@ -88,6 +93,8 @@ public class GameActivityRoom2 extends AppCompatActivity {
             public void run() {
                 playerName.setX(player.getPlayerX() - 20);
                 playerName.setY(player.getPlayerY() + 50);
+                swordImage.setX(player.getPlayerX());
+                swordImage.setY(player.getPlayerY());
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
                 scoreUpdateHandler.postDelayed(this, 0);
@@ -115,6 +122,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 Intent room1Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom1.class);
                 playerName.setText("");
+                swordImage.setVisibility(View.INVISIBLE);
                 room2.removeView(player.getSpriteView());
                 player.setPlayerX(990);
                 player.removeObservers();
@@ -130,6 +138,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
                 Intent room3Screen = new Intent(GameActivityRoom2.this,
                         GameActivityRoom3.class);
                 playerName.setText("");
+                swordImage.setVisibility(View.INVISIBLE);
                 room2.removeView(player.getSpriteView());
                 removeEnemies();
                 player.setPlayerX(40);
@@ -288,6 +297,7 @@ public class GameActivityRoom2 extends AppCompatActivity {
             Intent endScreen = new Intent(GameActivityRoom2.this,
                     EndActivity.class);
             playerName.setText("");
+            swordImage.setVisibility(View.INVISIBLE);
             room2.removeView(player.getSpriteView());
             removeEnemies();
             gameState.setTimeEnd(LocalTime.now());

@@ -1,10 +1,12 @@
 package com.example.cs2340a_team23.view;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
 
     private Random random = new Random();
     private TextView scoreTextView;
+    private ImageView swordImage;
     private GameState gameState;
     private Handler scoreUpdateHandler;
     private Runnable scoreUpdateRunnable;
@@ -78,6 +81,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
         playerName = findViewById(R.id.playerName);
         playerName.setText(player.getPlayerName());
 
+        swordImage = findViewById(R.id.swordImage);
+
         playerHealth = findViewById(R.id.playerHealth);
         playerHealth.setText("Health: " + Integer.toString(player.getHealth()));
 
@@ -95,6 +100,8 @@ public class GameActivityRoom1 extends AppCompatActivity {
             public void run() {
                 playerName.setX(player.getPlayerX() - 20);
                 playerName.setY(player.getPlayerY() + 50);
+                swordImage.setX(player.getPlayerX());
+                swordImage.setY(player.getPlayerY());
                 int newScore = gameState.getScore();
                 scoreTextView.setText("Score: " + newScore);
                 scoreUpdateHandler.postDelayed(this, 0);
@@ -132,6 +139,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
                     Intent room2Screen = new Intent(GameActivityRoom1.this,
                             GameActivityRoom2.class);
                     playerName.setText("");
+                    swordImage.setVisibility(View.INVISIBLE);
                     room1.removeView(player.getSpriteView());
                     removeEnemies();
                     player.setPlayerX(40);
@@ -301,6 +309,7 @@ public class GameActivityRoom1 extends AppCompatActivity {
             Intent endScreen = new Intent(GameActivityRoom1.this,
                     EndActivity.class);
             playerName.setText("");
+            swordImage.setVisibility(View.INVISIBLE);
             room1.removeView(player.getSpriteView());
             removeEnemies();
             gameState.setTimeEnd(LocalTime.now());
